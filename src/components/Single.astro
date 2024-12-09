@@ -7,15 +7,10 @@ const options = {
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5bWh6eGZzY3lwb3ZtdHV0ZmliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MzI2OTcsImV4cCI6MjA0OTMwODY5N30.ZWO8J1GEX5z2Em66Apb2wdoYYIPKVJevYH1qrIgUDeM",
   },
 };
-
-const behandlinger = await fetch(url, options).then((res) => res.json());
+// const { behandling } = Astro.props;
+const behandling = await fetch(url, options).then((res) => res.json());
 ---
 
 <li>
-  <!-- <h1>{behandling.behandling}</h1> -->
-  <!-- <a href={`/behandling/${behandling.slug}`}>
-    <h3>{behandling.behandling}</h3>
-    <h4>{behandling.pris}</h4>
-     <img src={`/img/${artist.image}`} alt={artist.name} /> 
-  </a> -->
+  <h1>behandling: {behandling.beskrivelse_kort}</h1>
 </li>
