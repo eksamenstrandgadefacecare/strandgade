@@ -1,0 +1,19 @@
+---
+const behandlinger = await fetch(
+  "https://zymhzxfscypovmtutfib.supabase.co/rest/v1/behandlinger",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5bWh6eGZzY3lwb3ZtdHV0ZmliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MzI2OTcsImV4cCI6MjA0OTMwODY5N30.ZWO8J1GEX5z2Em66Apb2wdoYYIPKVJevYH1qrIgUDeM", // Use environment variable for security
+    },
+  }
+).then((res) => res.json());
+import Single from "./Single.astro";
+---
+
+<ul>
+  <li>
+    {behandlinger.map((behandling) => <Single behandling={behandling} />)}
+  </li>
+</ul>
