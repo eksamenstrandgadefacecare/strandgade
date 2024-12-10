@@ -1,0 +1,13 @@
+---
+const { behandling, beskrivelse_kort, pris, img, slug } = Astro.props;
+---
+
+<!-- <a href={data.slug + "/"}> -->
+<a href=`/product/${slug}`>
+  <li>
+    <figure>
+      <h3>{behandling}</h3>
+      <p>{pris}</p>
+    </figure>
+  </li>
+</a>

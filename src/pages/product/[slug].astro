@@ -1,0 +1,25 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const behandlinger = await fetch(
+    "https://zymhzxfscypovmtutfib.supabase.co/rest/v1/behandlinger",
+    {
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5bWh6eGZzY3lwb3ZtdHV0ZmliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MzI2OTcsImV4cCI6MjA0OTMwODY5N30.ZWO8J1GEX5z2Em66Apb2wdoYYIPKVJevYH1qrIgUDeM",
+      },
+    }
+  ).then((res) => res.json());
+
+  return behandlinger.map((behandling: any) => ({
+    params: { slug: behandling.slug }, // [slug]=behandling.slug
+    props: { behandling }, // send al data med som props
+  }));
+}
+
+const { behandling } = Astro.props;
+console.log(behandling);
+---
+
+<MainLayout />

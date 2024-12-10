@@ -1,7 +1,4 @@
 ---
-import ListCard from "../components/ListCard.astro";
-import MainLayout from "../layouts/MainLayout.astro";
-
 const behandlinger = await fetch(
   "https://zymhzxfscypovmtutfib.supabase.co/rest/v1/behandlinger",
   {
@@ -13,10 +10,19 @@ const behandlinger = await fetch(
   }
 ).then((res) => res.json());
 
+import type { ACTION_ERROR_CODES } from "astro:actions";
+import Listcard from "../components/ListCard.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
 console.log(behandlinger);
 ---
 
 <MainLayout>
-  <!-- <ListCard /> -->
-  <h1>hej</h1>
+  <ul>
+    {
+      behandlinger.map((behandling: any) => {
+        return <Listcard {...behandling} />;
+      })
+    }
+  </ul>
 </MainLayout>
