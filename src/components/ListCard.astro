@@ -1,13 +1,19 @@
 ---
-const { behandling, beskrivelse_kort, pris, img, slug } = Astro.props;
+import Button from "./Button.astro";
+
+const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
+  Astro.props;
 ---
 
 <!-- <a href={data.slug + "/"}> -->
 <a href=`/product/${slug}`>
   <li>
     <figure>
-      <h3>{behandling}</h3>
-      <p>{pris}</p>
+      <h2>{behandling}</h2>
+      <p>{beskrivelse_kort}</p>
+      <img src={"images/" + imglist} alt="imglist}" />
     </figure>
+    <Button variant="secondary">BOOK TID</Button>
+    <Button variant="secondary">LÆS MERE</Button>
   </li>
 </a>
