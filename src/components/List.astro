@@ -1,5 +1,45 @@
 ---
 import Single from "./Single.astro";
+// import ArtistCard from "../../components/ArtistCard.astro";
+// import Main from "../layouts/Main.astro";
+
+const url = "https://alvenwirzpgcdjpfhrzm.supabase.co/rest/v1/karrussel";
+const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsdmVud2lyenBnY2RqcGZocnptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mjk1MTAzMzksImV4cCI6MjA0NTA4NjMzOX0.bnOeKs799xzM-adiHsVFkHdvJw_lZ-Ri4JAsV6Uvsd4",
+  },
+};
+
+const behandlinger = await fetch(url, options).then((res) => res.json());
+---
+
+<section>
+  <h1>LINEUP</h1>
+  <h2>THURSDAY 22 AUG 2024</h2>
+  <h2>OPENING HOURS: 18.00-01.00</h2>
+  <ul>
+    {behandlinger.map((behandling) => <Single data={behandling} />)}
+  </ul>
+</section>
+
+<!-- <ul>
+  {behandlinger.map((data) => <Single data={behandling} />)}
+</ul> -->
+<!-- // import ArtistCard from "../../components/ArtistCard.astro";
+// import Main from "../layouts/Main.astro";
+
+// const url = "https://zymhzxfscypovmtutfib.supabase.co/rest/v1/behandlinger";
+// const options = {
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp5bWh6eGZzY3lwb3ZtdHV0ZmliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM3MzI2OTcsImV4cCI6MjA0OTMwODY5N30.ZWO8J1GEX5z2Em66Apb2wdoYYIPKVJevYH1qrIgUDeM",
+  },
+};
+
+const artists = await fetch(url, options).then((res) => res.json());
+--- --><!-- ---
+import Single from "./Single.astro";
 
 const behandlinger = await fetch(
   "https://zymhzxfscypovmtutfib.supabase.co/rest/v1/behandlinger",
@@ -16,10 +56,17 @@ const behandlinger = await fetch(
 
 <ul>
   {behandlinger.map((data) => <Single behandling={data} />)}
+</ul> --><!-- <Main>
+<h1>LINEUP</h1>
+<h2>THURSDAY 22 AUG 2024</h2>
+<h2>OPENING HOURS: 18.00-01.00</h2>
+<ul>
+    {
+        artists.map(artist => <ArtistCard data={artist} />)
+    }
 </ul>
-
-<!-- KARRUSEL LEA OPGAVE LIST VIEW 
- 
+</Main> --><!-- KARRUSEL LEA OPGAVE LIST VIEW 
+---
 import ArtistCard from "../../components/ArtistCard.astro"
 import Main from "../layouts/Main.astro";
 
