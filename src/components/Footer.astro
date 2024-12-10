@@ -2,21 +2,57 @@
 import "../styles/global.css";
 ---
 <footer>
+    <h2>Kontaktoplysninger</h2>
+    <br>
+<p>Tlf: +45 22 75 92 60</p>
+<p>Mail: post@strandgadefacecare.dk</p>
+<p>Adresse: Strandgade 40 st, 1401 København K</p>
+<p>Booking: <a href="https://strandgadefacecare.onlinebooq.dk">https://strandgadefacecare.onlinebooq.dk</a></p>
+
+
+
 
 </footer>
+
 
 <style>
 
   footer{
-    position: relative;
+    position: relavtive;
+    margin-top: 0%;
     background-color: var(--Lysgrøn);
     padding: 50px;
-    height: 500px;
+    height: 250px;
   }
 
-  .kontaktinfo a {
-    
+a{
+ text-decoration: underline;
+ color: black;
+}
+
+.socials {
+    position: absolute;
+    top: 15%; /* Vertikalt centreret */
+    right: 20px; /* Afstand til højre */
+  
   }
+
+.icon {
+    display: block; /* For at sikre, at ikonerne vises under hinanden */
+    margin-bottom: 10px; /* Afstand mellem ikonerne */
+    width: 40px; /* Justér bredden på ikonerne */
+    height: 40px; /* Justér højden på ikonerne */
+  }
+
+
+
+a:hover {
+  text-decoration: underline;
+  color: var(--Beige);
+}
+
+
+
 
 .icon{
 position: absolute;
@@ -24,7 +60,6 @@ top: 0;
 right: 10px;
 margin: 20px;
 }
-
 
 
 
