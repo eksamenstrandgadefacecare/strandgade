@@ -6,6 +6,7 @@ import "../styles/global.css";
   <div class="container">
     <div class="subcontainer">
       <nav class="navbar">
+        <a href="/"><img class="logo" src="" alt="Logo" /></a>
         <ul class="nav-menu">
           <li class="nav-item"><a class="nav-link" href="/">FORSIDE</a></li>
           <li class="nav-item"><a class="nav-link" href="/liste">BEHANDLINGER</a></li>
@@ -13,8 +14,6 @@ import "../styles/global.css";
           <li class="nav-item"><a class="nav-link" href="/produkter">OM KLINIKKEN</a></li>
           <!-- INDSÆT KNAP -->
         </ul>
-
-        <a href="/"><img class="logo" src="" alt="Logo" /></a>
 
         <div class="hamburger">
           <div class="bar"></div>
@@ -55,12 +54,13 @@ import "../styles/global.css";
     .nav-menu {
       display: flex;
       align-items: center;
+      background: transparent;
     }
 
     li a {
       font-family: "Vidaloka", serif;
       color: var(--Mørkgrøn);
-      font-size: var(--H2-Size-Mobile);
+      font-size: 1rem;
       text-align: right;
       text-decoration: none;
       justify-content: space-evenly;
@@ -70,6 +70,7 @@ import "../styles/global.css";
 
     .navbar li a:hover {
       cursor: pointer;
+      color: var(--Lysgrøn);
     }
 
     .container {
@@ -167,12 +168,12 @@ import "../styles/global.css";
         flex-direction: row;
         gap: 20px;
         width: auto;
-        text-align: right;
-        background-color: none;
+        background: transparent;
+      }
+      .nav-item {
       }
 
-      .nav-item {
-        margin: 0; /* Reset margin for consistent layout */
+      .logo {
       }
     }
   </style>
