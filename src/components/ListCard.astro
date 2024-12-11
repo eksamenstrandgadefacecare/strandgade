@@ -13,8 +13,10 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
       <p>{beskrivelse_kort}</p>
       <img src={"images/" + imglist} alt="imglist}" />
     </figure>
-    <Button variant="secondary">BOOK TID</Button>
-    <Button variant="secondary">LÆS MERE</Button>
+    <div class="button">
+      <Button variant="secondary">BOOK TID</Button>
+      <Button variant="secondary">LÆS MERE</Button>
+    </div>
   </li>
 </a>
 
@@ -23,5 +25,13 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
     cursor: default;
     color: black;
     text-decoration: none;
+  }
+
+  .button {
+    text-align: center;
+  }
+
+  img {
+    padding: 1.5rem 0%;
   }
 </style>
