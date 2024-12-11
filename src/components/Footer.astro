@@ -19,7 +19,7 @@ import "../styles/global.css";
 
 
 <div class="ikoner-items">
-  (ikoner)
+  Ikoner - instagram og
 </div>
 
 </footer>
@@ -28,9 +28,8 @@ import "../styles/global.css";
 
 
 
-
 <style>
-
+  
   footer{
     /* position: relavtive; */
     margin-top: 0%;
@@ -38,61 +37,62 @@ import "../styles/global.css";
     padding: 50px;
     height: 250px;
   }
-
-.logo-item{
-  align-items: left; 
-  text-align: left; 
-}
-
-.ikoner-items{
-  align-items: center; 
-  text-align: center; 
-}
-a{
- text-decoration: underline;
- color: black;
-}
-
-.socials {
+  
+  .logo-item{
+    align-items: left; 
+    text-align: left; 
+  }
+  
+  .ikoner-items{
+    align-items: center; 
+    text-align: center; 
+  }
+  a{
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .socials {
     position: absolute;
     top: 15%; /* Vertikalt centreret */
     right: 20px; /* Afstand til højre */
-  
+    
   }
-
-.icon {
+  
+  .icon {
     /* display: block; For at sikre, at ikonerne vises under hinanden */
     margin-bottom: 10px; /* Afstand mellem ikonerne */
     width: 40px; /* Justér bredden på ikonerne */
     height: 40px; /* Justér højden på ikonerne */
   }
-
-
-
-a:hover {
-  text-decoration: underline;
-  color: var(--Beige);
+  
+  
+  
+  a:hover {
+    text-decoration: underline;
+    color: var(--Beige);
+  }
+  
+  
+  .icon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin: 20px;
+  }
+  
+  
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
+    gap: 20px; /* Afstand mellem kolonner */
+    padding: 20px; /* Indvendig afstand i hele gridet */
+    /* align-items: center; 
+    text-align: center; */
+  }
+  
+  
+@media(width>800px){
+  
 }
-
-
-
-
-.icon{
-position: absolute;
-top: 0;
-right: 10px;
-margin: 20px;
-}
-
-
-#grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
-      gap: 20px; /* Afstand mellem kolonner */
-      padding: 20px; /* Indvendig afstand i hele gridet */
-      /* align-items: center; 
-     text-align: center; */
-    }
-
-
 </style>
