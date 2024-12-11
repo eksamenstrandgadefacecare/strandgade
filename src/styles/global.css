@@ -33,31 +33,39 @@ h3 {
   padding-bottom: 2rem;
   text-align: center;
 }
+h2 {
+  font-size: var(--H2-Size-Mobile);
+}
+h3 {
+  font-size: var(--H3-Size-Mobile);
+  font-style: italic;
+}
 
 p,
-h6 {
+h4 {
   font-family: "Open Sans", sans-serif;
   font-size: var(--Brødtekst-Size-Mobile);
   line-height: 1.8rem;
   margin: 0rem 8%;
 }
-
-h3 {
-  font-style: italic;
-}
-h6 {
+h4 {
   font-weight: bold;
 }
 
 @media (width > 800px) {
   /* Ved desktop størrelse */
-  h1,
-  h2,
-  h3 {
+  h1 {
+    font-size: var(--H1-Size-Desktop);
+  }
+  h2 {
     font-size: var(--H2-Size-Desktop);
   }
+  h3 {
+    font-size: var(--H3-Size-Desktop);
+  }
+
   p,
-  h6 {
+  h4 {
     margin: 0rem 25%;
     font-size: var(--Brødtekst-Size-Desktop);
     line-height: var(--LineHeight);
@@ -73,11 +81,17 @@ Herunder har vi alt overordnet :root samlet, som vi henviser til med var()
 
 :root {
   /* Font Size Desktop*/
+  --H1-Size-Desktop: 4rem;
   --H2-Size-Desktop: 3rem;
+  --H3-Size-Desktop: 2rem;
+  --H4-Size-Desktop: 1.5rem;
   --Brødtekst-Size-Desktop: 1.1rem;
 
   /* Font Size Mobile*/
-  --H2-Size-Mobile: 1.7rem;
+  --H1-Size-Desktop: 2rem;
+  --H2-Size-Desktop: 1.7rem;
+  --H3-Size-Desktop: 1.5rem;
+  --H4-Size-Desktop: 1.1rem;
   --Brødtekst-Size-Mobile: 0.9rem;
 
   /* Colors */
