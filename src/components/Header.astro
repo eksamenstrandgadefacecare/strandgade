@@ -7,22 +7,21 @@ import Button from "./Button.astro";
   <div class="container">
     <div class="subcontainer">
       <nav class="navbar">
-        <a href="./pages/index.astro"
+        <a href="..index.astro"
           ><img class="logo" src="/images/logo_desktop.svg" alt="Logo" /></a
         >
         <ul class="nav-menu">
           <li class="nav-item">
-            <a class="nav-link" href="./pages/index.astro">FORSIDE</a>
+            <a class="nav-link" href="/index">FORSIDE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/listview.astro">BEHANDLINGER</a>
+            <a class="nav-link" href="/listview">BEHANDLINGER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/produkter.astro">PRODUKTER</a>
+            <a class="nav-link" href="/produkter">PRODUKTER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./pages/omklinikken.astro">OM KLINIKKEN</a
-            >
+            <a class="nav-link" href="/omklinikken">OM KLINIKKEN</a>
           </li>
           <Button variant="secondary">BOOK TID</Button>
         </ul>
@@ -36,153 +35,153 @@ import Button from "./Button.astro";
       </nav>
     </div>
   </div>
+</header>
 
-  <script>
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+<style>
+  ul {
+    list-style-type: none;
+    text-align: right;
+  }
 
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    });
+  li {
+    display: inline;
+  }
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    background: transparent;
+  }
 
-    document.querySelectorAll(".nav-link").forEach((n) =>
-      n.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-      })
-    );
-  </script>
+  li a {
+    font-family: "Vidaloka", serif;
+    color: var(--Mørkgrøn);
+    font-size: 1rem;
+    text-align: right;
+    text-decoration: none;
+    justify-content: space-evenly;
+    border-radius: 40px;
+    padding: 20px;
+  }
 
-  <style>
-    ul {
-      list-style-type: none;
-      text-align: right;
+  .navbar li a:hover {
+    cursor: pointer;
+    color: var(--Lysgrøn);
+  }
+
+  .container {
+    width: 100%;
+    margin: auto;
+  }
+
+  .subcontainer {
+    width: auto;
+    margin: auto;
+  }
+
+  .navbar {
+    width: 100%;
+    min-height: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 5px 0;
+    transition: all 0.8s ease;
+    background-color: var(--Mørkgrøn);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(40deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: absolute;
+    left: -200%;
+    top: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 0;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+    margin: 0.5rem;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .hamburger {
+      display: none;
     }
 
-    li {
-      display: inline;
-    }
     .nav-menu {
+      position: static;
       display: flex;
-      align-items: center;
+      flex-direction: row;
+      gap: 20px;
+      width: auto;
       background: transparent;
     }
-
-    li a {
-      font-family: "Vidaloka", serif;
-      color: var(--Mørkgrøn);
-      font-size: 1rem;
-      text-align: right;
-      text-decoration: none;
-      justify-content: space-evenly;
-      border-radius: 40px;
-      padding: 20px;
-    }
-
-    .navbar li a:hover {
-      cursor: pointer;
-      color: var(--Lysgrøn);
-    }
-
-    .container {
-      width: 100%;
-      margin: auto;
-    }
-
-    .subcontainer {
-      width: auto;
-      margin: auto;
-    }
-
-    .navbar {
-      width: 100%;
-      min-height: 7px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .nav-menu {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      margin: 0.5rem;
-    }
-
-    .bar {
-      display: block;
-      width: 30px;
-      height: 2px;
-      margin: 5px 0;
-      transition: all 0.8s ease;
-      background-color: var(--Mørkgrøn);
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(6px) rotate(40deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-      position: absolute;
-      left: -200%;
-      top: 0;
-      gap: 0;
-      flex-direction: column;
-      background-color: white;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-      z-index: 0;
-    }
-
     .nav-item {
-      margin: 16px 0;
-    }
-
-    .nav-menu.active {
-      left: 0;
     }
 
     .logo {
-      height: 70px;
-      width: 70px;
-      margin: 0.5rem;
     }
+  }
+</style>
 
-    /* DESKTOP */
-    @media (min-width: 800px) {
-      .hamburger {
-        display: none;
-      }
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".nav-menu");
 
-      .nav-menu {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        width: auto;
-        background: transparent;
-      }
-      .nav-item {
-      }
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
 
-      .logo {
-      }
-    }
-  </style>
-</header>
+  document.querySelectorAll(".nav-link").forEach((n) =>
+    n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+</script>
