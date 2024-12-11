@@ -1,30 +1,53 @@
 ---
 import "../styles/global.css";
 ---
-<footer>
-    <h2>Kontaktoplysninger</h2>
-    <br>
+<footer id="grid-container">
+
+  <div class="logo-item">
+    logo
+  </div>
+
+ <div>
+<h2>Kontaktoplysninger</h2>
+<br>
 <p>Tlf: +45 22 75 92 60</p>
 <p>Mail: post@strandgadefacecare.dk</p>
 <p>Adresse: Strandgade 40 st, 1401 København K</p>
 <p>Booking: <a href="https://strandgadefacecare.onlinebooq.dk">https://strandgadefacecare.onlinebooq.dk</a></p>
+</div>
 
 
 
+<div class="ikoner-items">
+  (ikoner)
+</div>
 
 </footer>
+
+
+
+
 
 
 <style>
 
   footer{
-    position: relavtive;
+    /* position: relavtive; */
     margin-top: 0%;
     background-color: var(--Lysgrøn);
     padding: 50px;
     height: 250px;
   }
 
+.logo-item{
+  align-items: left; 
+  text-align: left; 
+}
+
+.ikoner-items{
+  align-items: center; 
+  text-align: center; 
+}
 a{
  text-decoration: underline;
  color: black;
@@ -38,7 +61,7 @@ a{
   }
 
 .icon {
-    display: block; /* For at sikre, at ikonerne vises under hinanden */
+    /* display: block; For at sikre, at ikonerne vises under hinanden */
     margin-bottom: 10px; /* Afstand mellem ikonerne */
     width: 40px; /* Justér bredden på ikonerne */
     height: 40px; /* Justér højden på ikonerne */
@@ -62,6 +85,14 @@ margin: 20px;
 }
 
 
+#grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
+      gap: 20px; /* Afstand mellem kolonner */
+      padding: 20px; /* Indvendig afstand i hele gridet */
+      /* align-items: center; 
+     text-align: center; */
+    }
 
 
 </style>
