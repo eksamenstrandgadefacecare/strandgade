@@ -5,11 +5,21 @@ import Button from "./Button.astro";
 
 <section>
   <div>
-    <img src="images/be" alt="" />
-    <Button variant="secondary">Behandlinger</Button>
+    <img src="images/behandlinger.webp" alt="behandling" />
+    <Button class="btn" variant="secondary">Behandlinger</Button>
   </div>
   <div>
-    <img src="" alt="" />
-    <Button variant="secondary">Produkter</Button>
+    <img src="images/produkter.wepb" alt="produkter" />
+    <Button class="btn" variant="secondary">Produkter</Button>
   </div>
 </section>
+
+<style>
+  .btn {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+</style>
