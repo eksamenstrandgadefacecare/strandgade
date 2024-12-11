@@ -28,13 +28,16 @@ h1,
 h2,
 h3 {
   font-family: "Vidaloka", serif;
-  font-size: var(--H2-Size-Mobile);
-  padding-top: 4rem;
-  padding-bottom: 2rem;
   text-align: center;
+}
+h1 {
+  font-size: var(--H1-Size-Mobile);
+  padding-top: 6rem;
 }
 h2 {
   font-size: var(--H2-Size-Mobile);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 h3 {
   font-size: var(--H3-Size-Mobile);
@@ -69,7 +72,6 @@ h4 {
     margin: 0rem 25%;
     font-size: var(--Brødtekst-Size-Desktop);
     line-height: var(--LineHeight);
-    padding-bottom: 2.5rem;
   }
 }
 
@@ -81,17 +83,17 @@ Herunder har vi alt overordnet :root samlet, som vi henviser til med var()
 
 :root {
   /* Font Size Desktop*/
-  --H1-Size-Desktop: 4rem;
+  --H1-Size-Desktop: 7rem;
   --H2-Size-Desktop: 3rem;
   --H3-Size-Desktop: 2rem;
   --H4-Size-Desktop: 1.5rem;
   --Brødtekst-Size-Desktop: 1.1rem;
 
   /* Font Size Mobile*/
-  --H1-Size-Desktop: 2rem;
-  --H2-Size-Desktop: 1.7rem;
-  --H3-Size-Desktop: 1.5rem;
-  --H4-Size-Desktop: 1.1rem;
+  --H1-Size-Mobile: 4rem;
+  --H2-Size-Mobile: 1.7rem;
+  --H3-Size-Mobile: 1.5rem;
+  --H4-Size-Mobile: 1.1rem;
   --Brødtekst-Size-Mobile: 0.9rem;
 
   /* Colors */
@@ -104,7 +106,6 @@ Herunder har vi alt overordnet :root samlet, som vi henviser til med var()
   /* Other */
   --LineHeight: 2.1rem;
   --BorderRadius: 0.3rem;
-  --Padding: 2rem;
 }
 
 /*
