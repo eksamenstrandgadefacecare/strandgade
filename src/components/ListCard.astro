@@ -1,12 +1,11 @@
 ---
 import Button from "./Button.astro";
 
-const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
-  Astro.props;
+const { behandling, beskrivelse_kort, pris, imgsingle, imglist } = Astro.props;
 ---
 
-<!-- <a href={data.slug + "/"}> -->
-<a href=`/product/${slug}`>
+<a href="/">
+  <!-- <a href=`/product/${slug}`> -->
   <li>
     <figure>
       <h2>{behandling}</h2>
