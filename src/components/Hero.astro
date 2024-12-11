@@ -4,28 +4,32 @@ import Button from "./Button.astro";
 ---
 
 <section>
-  <h1>Strandgade Facecare</h1>
-  <h2>Frisk hud med naturlig pleje, glød og opstramning.</h2>
+  <h1 id="animation">Strandgade Facecare</h1>
+  <h2 id="animation" class="underoverskrift">Frisk hud med naturlig pleje, glød <br />og opstramning.</h2>
   <Button variant="secondary">BOOK TID</Button>
-  <img class="blad_top" src="/images/blad_top.svg" alt="" />
-  <img class="blad_venstre" src="/images/blad_venstre.svg" alt="" />
-  <img class="blad_hojre" src="/images/blad_hojre.svg" alt="" />
+  <img id="animation" class="blad_top" src="/images/blad_top.svg" alt="" />
+  <img id="animation" class="blad_venstre" src="/images/blad_venstre.svg" alt="" />
+  <img id="animation" class="blad_hojre" src="/images/blad_hojre.svg" alt="" />
   <!-- <img src="/images/behandlinger.webp" alt="" /> -->
 </section>
 
 <style>
-  h1 {
-    /* MANGLER FONT SIZE */
-    font-family: "Vidaloka", serif;
-    color: var(--Brun);
+  h1,
+  h2 {
     text-align: center;
   }
 
-  h2 {
-    /* MANGLER FONT SIZE */
-    font-family: "Vidaloka", serif;
-    color: var(--Brun);
-    text-align: center;
+  @keyframes fade_in_kf {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  #animation {
+    animation-name: fade_in_kf;
+    animation-duration: 5s;
   }
   .blad_top {
     position: absolute;
@@ -33,7 +37,7 @@ import Button from "./Button.astro";
     left: 0;
     width: 90%;
     height: auto;
-    z-index: -1; /* Push it behind the rest of the content */
+    z-index: -1;
     overflow: hidden;
   }
 
@@ -41,13 +45,50 @@ import Button from "./Button.astro";
     width: 80%;
     z-index: -1;
     position: relative;
-    top: -100px;
+    top: -350px;
   }
 
-  .blad_hojre {
-    position: relative;
-    width: 80%;
+  .blad_højre {
+    display: none;
+  }
+
+  /* .blad_hojre {
+    position: absolute;
+    width: 50%;
     overflow: hidden;
     right: 0;
+    top: 190px;
+  } */
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .blad_top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: auto;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .blad_venstre {
+      width: 40%;
+      z-index: -1;
+      position: absolute;
+      top: 250px;
+      left: -3px;
+    }
+
+    .blad_hojre {
+      position: absolute;
+      width: 27%;
+      overflow: hidden;
+      right: 0;
+      top: 150px;
+    }
+    .underoverskrift {
+      padding: 5rem;
+    }
   }
 </style>
