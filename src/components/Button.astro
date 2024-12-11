@@ -1,0 +1,65 @@
+---
+const { variant = "primary", size = "medium" } = Astro.props;
+import "../styles/global.css";
+---
+
+<button data-variant={variant} data-size={size}>
+  <slot />
+</button>
+
+<style>
+  /* primære */
+  [data-variant="primary"] {
+    padding: 1em;
+    background-color: none;
+    color: var(--Beige);
+    border-color: var(--Beige);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  [data-variant="primary"]:hover {
+    padding: 1em;
+    background-color: none;
+    color: var(--Lysgrøn);
+    border-color: var(--Lysgrøn);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  [data-variant="primary"]:active {
+    padding: 1em;
+    background-color: none;
+    color: var(--Mørkgrøn);
+    border-color: var(--Mørkgrøn);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+
+  /* sekundær */
+  [data-variant="secondary"] {
+    padding: 1em;
+    background-color: var(--Mørkgrøn);
+    color: var(--Beige);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  [data-variant="secondary"]:hover {
+    background-color: var(--Lysgrøn);
+    color: var(--Beige);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+
+  [data-variant="secondary"]:active {
+    background-color: none;
+    color: var(--Mørkgrøn);
+    border-color: var(--Mørkgrøn);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+</style>
