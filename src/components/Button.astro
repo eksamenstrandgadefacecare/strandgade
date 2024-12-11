@@ -11,62 +11,45 @@ import "../styles/global.css";
   button {
     cursor: pointer;
     font-family: "vidaloka", serif;
+    font-size: medium;
+    border-style: solid;
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    border-width: 2px;
   }
   /* primære */
   [data-variant="primary"] {
     padding: 1em;
     background-color: var(--Mørkgrøn);
     color: var(--Beige);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
-    width: 288px;
-    height: 79px;
   }
   [data-variant="primary"]:hover {
     background-color: var(--Lysgrøn);
     color: var(--Beige);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
   }
 
   [data-variant="primary"]:active {
-    background-color: var(--Beige);
+    background: transparent;
     color: var(--Mørkgrøn);
-    border-color: var(--Mørkgrøn);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
   }
   /* sekundær */
   [data-variant="secondary"] {
     padding: 1em;
-    background-color: none;
+    background: transparent;
     color: var(--Beige);
     border-color: var(--Beige);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
-    width: 288px;
-    height: 79px;
   }
   [data-variant="secondary"]:hover {
     padding: 1em;
     background-color: none;
     color: var(--Lysgrøn);
     border-color: var(--Lysgrøn);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
   }
   [data-variant="secondary"]:active {
     padding: 1em;
     background-color: none;
     color: var(--Mørkgrøn);
     border-color: var(--Mørkgrøn);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
   }
 </style>
