@@ -1,5 +1,17 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Produkter from "../components/Produkter.astro";
 ---
 
-<MainLayout> slot </MainLayout>
+<MainLayout>
+  <section>
+    <h2>Produkter</h2>
+    <h4>
+      Ønsker du at forlænge effekten af dine behandlinger derhjemme, kan du købe
+      de produkter, der bruges under behandlingerne. Vi tilbyder produkter fra
+      det danske mærker DermaOxy, som er kendt for deres høje kvalitet og
+      effekt.
+    </h4>
+  </section>
+  <Produkter />
+</MainLayout>

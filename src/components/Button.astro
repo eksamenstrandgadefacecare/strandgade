@@ -8,8 +8,39 @@ import "../styles/global.css";
 </button>
 
 <style>
+  button {
+    cursor: pointer;
+    font-family: "vidaloka", serif;
+  }
   /* primære */
   [data-variant="primary"] {
+    padding: 1em;
+    background-color: var(--Mørkgrøn);
+    color: var(--Beige);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 288px;
+    height: 79px;
+  }
+  [data-variant="primary"]:hover {
+    background-color: var(--Lysgrøn);
+    color: var(--Beige);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+
+  [data-variant="primary"]:active {
+    background-color: var(--Beige);
+    color: var(--Mørkgrøn);
+    border-color: var(--Mørkgrøn);
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+  }
+  /* sekundær */
+  [data-variant="secondary"] {
     padding: 1em;
     background-color: none;
     color: var(--Beige);
@@ -17,8 +48,10 @@ import "../styles/global.css";
     border-style: solid;
     border-radius: 15px;
     border-width: 2px;
+    width: 288px;
+    height: 79px;
   }
-  [data-variant="primary"]:hover {
+  [data-variant="secondary"]:hover {
     padding: 1em;
     background-color: none;
     color: var(--Lysgrøn);
@@ -27,34 +60,8 @@ import "../styles/global.css";
     border-radius: 15px;
     border-width: 2px;
   }
-  [data-variant="primary"]:active {
-    padding: 1em;
-    background-color: none;
-    color: var(--Mørkgrøn);
-    border-color: var(--Mørkgrøn);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
-  }
-
-  /* sekundær */
-  [data-variant="secondary"] {
-    padding: 1em;
-    background-color: var(--Mørkgrøn);
-    color: var(--Beige);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
-  }
-  [data-variant="secondary"]:hover {
-    background-color: var(--Lysgrøn);
-    color: var(--Beige);
-    border-style: solid;
-    border-radius: 15px;
-    border-width: 2px;
-  }
-
   [data-variant="secondary"]:active {
+    padding: 1em;
     background-color: none;
     color: var(--Mørkgrøn);
     border-color: var(--Mørkgrøn);
