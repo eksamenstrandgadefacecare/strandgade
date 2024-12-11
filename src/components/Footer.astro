@@ -84,15 +84,19 @@ import "../styles/global.css";
   
   #grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
-    gap: 20px; /* Afstand mellem kolonner */
-    padding: 20px; /* Indvendig afstand i hele gridet */
-    /* align-items: center; 
-    text-align: center; */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    padding: 20px; 
+    
   }
-  
-  
-@media(width>800px){
-  
-}
+
+  @media (max-width: 800px) {
+    #grid-container {
+      grid-template-columns: 1fr; 
+      gap: 10px; 
+      
+    }
+  }
+
+ 
 </style>
