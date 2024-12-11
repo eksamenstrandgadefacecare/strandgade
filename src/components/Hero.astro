@@ -6,5 +6,48 @@ import Button from "./Button.astro";
 <section>
   <h1>Strandgade Facecare</h1>
   <h2>Frisk hud med naturlig pleje, glød og opstramning.</h2>
-  <Button variant="primary">BOOK TID</Button>
+  <Button variant="secondary">BOOK TID</Button>
+  <img class="blad_top" src="/images/blad_top.svg" alt="" />
+  <img class="blad_venstre" src="/images/blad_venstre.svg" alt="" />
+  <img class="blad_hojre" src="/images/blad_hojre.svg" alt="" />
+  <!-- <img src="/images/behandlinger.webp" alt="" /> -->
 </section>
+
+<style>
+  h1 {
+    /* MANGLER FONT SIZE */
+    font-family: "Vidaloka", serif;
+    color: var(--Brun);
+    text-align: center;
+  }
+
+  h2 {
+    /* MANGLER FONT SIZE */
+    font-family: "Vidaloka", serif;
+    color: var(--Brun);
+    text-align: center;
+  }
+  .blad_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: auto;
+    z-index: -1; /* Push it behind the rest of the content */
+    overflow: hidden;
+  }
+
+  .blad_venstre {
+    width: 80%;
+    z-index: -1;
+    position: relative;
+    top: -100px;
+  }
+
+  .blad_hojre {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+    right: 0;
+  }
+</style>

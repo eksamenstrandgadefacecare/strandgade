@@ -1,18 +1,19 @@
 ---
 import "../styles/global.css";
+import Button from "./Button.astro";
 ---
 
 <header>
   <div class="container">
     <div class="subcontainer">
       <nav class="navbar">
-        <a href="/"><img class="logo" src="" alt="Logo" /></a>
+        <a href="./pages/index.astro"><img class="logo" src="/images/logo_desktop.svg" alt="Logo" /></a>
         <ul class="nav-menu">
-          <li class="nav-item"><a class="nav-link" href="/">FORSIDE</a></li>
-          <li class="nav-item"><a class="nav-link" href="/liste">BEHANDLINGER</a></li>
-          <li class="nav-item"><a class="nav-link" href="/produkter">PRODUKTER</a></li>
-          <li class="nav-item"><a class="nav-link" href="/produkter">OM KLINIKKEN</a></li>
-          <!-- INDSÆT KNAP -->
+          <li class="nav-item"><a class="nav-link" href="./pages/index.astro">FORSIDE</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/listview.astro">BEHANDLINGER</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/produkter.astro">PRODUKTER</a></li>
+          <li class="nav-item"><a class="nav-link" href="./pages/omklinikken.astro">OM KLINIKKEN</a></li>
+          <Button variant="secondary">BOOK TID</Button>
         </ul>
 
         <div class="hamburger">
@@ -101,6 +102,7 @@ import "../styles/global.css";
     .hamburger {
       display: block;
       cursor: pointer;
+      margin: 0.5rem;
     }
 
     .bar {
@@ -145,19 +147,14 @@ import "../styles/global.css";
       left: 0;
     }
 
+    .logo {
+      height: 70px;
+      width: 70px;
+      margin: 0.5rem;
+    }
+
     /* DESKTOP */
     @media (min-width: 800px) {
-      /* li {
-        list-style-type: none;
-        align-items: center;
-        display: inline-block;
-        padding: 10px;
-      }
-
-      ul {
-        text-align: right;
-      } */
-
       .hamburger {
         display: none;
       }
