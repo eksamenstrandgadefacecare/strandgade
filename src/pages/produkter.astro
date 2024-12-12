@@ -14,7 +14,7 @@ import "../styles/global.css";
     <div>
       <img class="images" src="images/facewash.webp" alt="dermaoxy facewash" />
       <h3>DermaOXY FACEWASH</h3>
-      <p>
+      <p class="beskrivelse">
         Fjerner mildt og effektivt fedtstoffer, snavs og makeup fra din hud uden
         at fjerne alt fugt.
       </p>
@@ -22,7 +22,7 @@ import "../styles/global.css";
     <div>
       <img class="images" src="images/daycream.webp" alt="dermaoxy daycream" />
       <h3>DermaOXY DAY PROTECTING CREAM</h3>
-      <p>
+      <p class="beskrivelse">
         Supplerer din huds naturlige indhold af hyaluronsyre og hjælper med at
         binde fugten i huden.
       </p>
@@ -34,7 +34,7 @@ import "../styles/global.css";
         alt="dermaoxy nightcream"
       />
       <h3>DermaOXY NIGHT RELAXING CREAM</h3>
-      <p>
+      <p class="beskrivelse">
         Sørger for, at din hud får den nødvendige fugt og næring natten igennem
         med et højt indhold af Q10, vitamin E, grøn te og hyaluronsyre.
       </p>
@@ -57,12 +57,15 @@ import "../styles/global.css";
     /* width: 50%; */
   }
   .daycream {
-    width: 60%;
+    width: 40%;
     height: auto;
   }
   .images {
-    width: 65%;
+    width: 45%;
     height: auto;
+  }
+  .beskrivelse {
+    margin: 0;
   }
   @media (width > 800px) {
     section {
@@ -74,6 +77,15 @@ import "../styles/global.css";
     div {
       padding-left: 2rem;
       padding-right: 2rem;
+    }
+
+    .daycream {
+      width: 40%;
+      height: auto;
+    }
+    .images {
+      width: 45%;
+      height: auto;
     }
   }
 </style>
