@@ -5,49 +5,100 @@ import MainLayout from "../layouts/MainLayout.astro";
 <MainLayout>
   <h2>Om klinikken</h2>
   <section>
+    <div class="portræt">
+      <img class="center" src="images/portræt.webp" alt="protræt" />
+    </div><div>
+      <h3>Uddannelsesbaggrund</h3><p>
+        Jeg er certificeret i Japansk Cosmo Lifting og uddannet Elleebana Lash
+        Lift stylist. Før jeg skiftede karriere, arbejdede jeg i mange år som
+        sygeplejerske, hvilket har givet mig en solid baggrund inden for omsorg
+        og behandling.
+      </p><h3>Produkter</h3><p>
+        I de fleste behandlinger anvender jeg DermaOXY´s danske
+        hudplejeprodukter, som også kan købes i klinikken.
+      </p>
+    </div>
+  </section>
+  <section>
     <div>
-      <div><img src="images/protræt.webp" alt="protræt" /></div><div>
-        <h3>Uddannelsesbaggrund</h3><p>
-          Jeg er certificeret i Japansk Cosmo Lifting og uddannet Elleebana Lash
-          Lift stylist. Før jeg skiftede karriere, arbejdede jeg i mange år som
-          sygeplejerske, hvilket har givet mig en solid baggrund inden for
-          omsorg og behandling.
-        </p><h3>Produkter</h3><p>
-          I de fleste behandlinger anvender jeg DermaOXY´s danske
-          hudplejeprodukter, som også kan købes i klinikken.
-        </p>
-      </div>
+      <h3>Klinikkens beliggenhed</h3><p>
+        Min klinik, Strandgade Facecare, åbnede i 2016 og ligger på
+        Christianshavn i et charmerende klassisk hus fra 1700-tallet. Her skaber
+        jeg en hyggelig og afslappende atmosfære, der er perfekt til
+        selvforkælelse.
+      </p>
     </div>
     <div>
-      <div>
-        <h3>Klinikkens beliggenhed</h3><p>
-          Min klinik, Strandgade Facecare, åbnede i 2016 og ligger på
-          Christianshavn i et charmerende klassisk hus fra 1700-tallet. Her
-          skaber jeg en hyggelig og afslappende atmosfære, der er perfekt til
-          selvforkælelse.
-        </p>
-      </div>
-      <div><img src="images/kort.webp" alt="christianshavn" /></div>
+      <img class="center" src="images/kort.webp" alt="christianshavn" />
     </div>
   </section>
   <h2>Kontakt mig</h2>
   <section>
     <div>
+      <!-- <div>
+        <ul>
+          <li>+45 22 75 92 60</li>
+          <li>post@strandgadefacecare.dk</li>
+          <li>Strandgade 40 st, 1401 København K</li>
+        </ul>
+      </div> -->
       <div>
-        <img src="images/logo_desktop.webp" alt="telefon logo" />
+        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
         <p>+45 22 75 92 60</p>
       </div>
       <div>
-        <img src="mages/logo_desktop.webp" alt="mail logo" />
+        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
         <p>post@strandgadefacecare.dk</p>
       </div>
       <div>
-        <img src="mages/logo_desktop.webp" alt="lokation logo" />
+        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
         <p>Strandgade 40 st, 1401 København K</p>
       </div>
     </div>
     <div>
-      <img src="images/kort.webp" alt="kort til navigation" />
+      <img class="center" src="images/kort.webp" alt="kort til navigation" />
     </div>
   </section>
 </MainLayout>
+
+<style>
+  section {
+    margin-top: 3rem;
+    margin: 1.5rem;
+  }
+  h3 {
+    margin: 1.5rem;
+  }
+  img {
+    margin-top: 0.5rem;
+  }
+  /* .portræt {
+    width: 50%;
+    height: auto;
+    width: 70%; 
+  }*/
+  p {
+    margin: 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .center {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    height: auto;
+    width: 1.5rem;
+    /* margin: 0.5rem; */
+  }
+  @media (width > 800px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+  }
+</style>
