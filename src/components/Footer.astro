@@ -4,99 +4,99 @@ import "../styles/global.css";
 <footer id="grid-container">
 
   <div class="logo-item">
-    logo
+    <a href="/"
+    ><img class="logo" src="/images/logo_desktop.svg" alt="Logo" /></a
+  >
   </div>
 
- <div>
-<h2>Kontaktoplysninger</h2>
-<br>
-<p>Tlf: +45 22 75 92 60</p>
-<p>Mail: post@strandgadefacecare.dk</p>
-<p>Adresse: Strandgade 40 st, 1401 København K</p>
-<p>Booking: <a href="https://strandgadefacecare.onlinebooq.dk">https://strandgadefacecare.onlinebooq.dk</a></p>
+
+
+<div class="kontaktoplysninger">
+  <ul style="list-style-type: none; padding: 0; margin: 0;">
+    <li>Kontaktoplysninger</li>
+    <br>
+      <li>Tlf: +45 22 75 92 60</li>
+      <li>Mail: post@strandgadefacecare.dk</li>
+      <li>Adresse: Strandgade 40 st, 1401 København K</li>
+      <li>Booking: <a href="https://strandgadefacecare.onlinebooq.dk">https://strandgadefacecare.onlinebooq.dk</a></li>
+  </ul>
 </div>
 
 
-
 <div class="ikoner-items">
-  Ikoner - instagram og
+  <img src="/images/Ikon_instagram.svg" alt="">
+  <img src="/images/Ikon_facebook.svg" alt="">
 </div>
 
 </footer>
 
 
 
-
-
 <style>
   
   footer{
-    /* position: relavtive; */
+    /* position: relative; */
     margin-top: 0%;
     background-color: var(--Lysgrøn);
-    padding: 50px;
-    height: 250px;
+    height: auto;
   }
   
-  .logo-item{
+   .logo-item{
     align-items: left; 
     text-align: left; 
-  }
-  
-  .ikoner-items{
-    align-items: center; 
-    text-align: center; 
-  }
+    } 
+    
+    .ikoner-items{
+     align-items: left; 
+      text-align: left;  
+      justify-content: space-between;
+      display: flex;
+      
+      
+    } 
   a{
     text-decoration: underline;
-    color: black;
+    color: var(--Brun);
   }
   
-  .socials {
-    position: absolute;
-    top: 15%; /* Vertikalt centreret */
-    right: 20px; /* Afstand til højre */
-    
-  }
-  
-  .icon {
-    /* display: block; For at sikre, at ikonerne vises under hinanden */
-    margin-bottom: 10px; /* Afstand mellem ikonerne */
-    width: 40px; /* Justér bredden på ikonerne */
-    height: 40px; /* Justér højden på ikonerne */
-  }
-  
-  
-  
+  .kontaktoplysninger ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+ .kontaktoplysninger ul li {
+    margin-bottom: 5px;
+} 
+
   a:hover {
     text-decoration: underline;
     color: var(--Beige);
   }
   
   
-  .icon{
-    position: absolute;
-    top: 0;
-    right: 10px;
-    margin: 20px;
-  }
-  
-  
   #grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; 
-    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  
+    padding: 20px;  
+    align-items: center;
     
   }
 
   @media (max-width: 800px) {
     #grid-container {
+      display: grid;
       grid-template-columns: 1fr; 
       gap: 10px; 
-      
-    }
-  }
 
- 
+    }
+  } 
+
+  .logo {
+    height: 70px;
+    width: 70px;
+    margin: 0.5rem;
+  }
 </style>
