@@ -2,8 +2,151 @@
 import ListCard from "../components/ListCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
   <Hero />
+  <section class="cards">
+    <div>
+      <img src="images/behandlinger.webp" alt="" />
+      <div class="image_button1"><Button variant="secondary">BEHANDLINGER</Button></div>
+    </div>
+    <div>
+      <img src="images/produkter.webp" alt="" />
+      <div class="image_button2"><Button variant="secondary">PRODUKTER</Button></div>
+    </div>
+  </section>
+  <section class="intropriser">
+    <div>
+      <img class="hvid_logo" src="images/logo_hvid.svg" alt="hvid illustration af logo" />
+    </div>
+    <div class="intro_overskrift"><h2>Intro Priser</h2></div>
+    <h3>Til dig, der ikke har prøvet behandlingerne før:</h3>
+    <ol class="behandling_list">
+      <li>Japansk Lifting: 450 ,-</li>
+      <li>Diamant Peeling: 500 ,-</li>
+      <li>Oxygenbehandling: 500 ,-</li>
+      <li>Lash Lift (Elleebana): 375 ,-</li>
+    </ol>
+    <h4>Køb 5 behandlinger og få en ekstra gratis!</h4>
+  </section>
+  <section class="for_eftercard">
+    <div class="for_img">
+      <h2>Før</h2>
+      <img src="images/før.webp" alt="før billede af skønhedsbehandling" />
+    </div>
+    <div class="efter_img">
+      <h2>Efter</h2>
+      <img src="images/efter.webp" alt="efter billede af skønhedsbehandling" />
+    </div>
+  </section>
+  <div class="for_eftertekst">
+    <p>Hanne, 52</p>
+    <p>Japansk lifting ansigtsbehandling</p>
+  </div>
 </MainLayout>
+
+<style>
+  .cards {
+    display: grid;
+    position: relative;
+  }
+
+  .image {
+    display: block;
+    max-width: 100%;
+  }
+
+  .image_button1 {
+    position: absolute;
+    top: 38%;
+    right: 18px;
+  }
+  .image_button2 {
+    position: absolute;
+    top: 88%;
+    right: 18px;
+  }
+
+  .intro_overskrift {
+    padding: 1.5rem;
+  }
+  .hvid_logo {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    z-index: -1;
+    right: 90px;
+    text-align: center;
+  }
+
+  .behandling_list {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  li {
+    font-family: "Open Sans", sans-serif;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: "Vidaloka", serif;
+  }
+
+  .for_eftercard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.2rem;
+  }
+
+  .for_img,
+  .efter_img {
+    padding: 0.3rem;
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+    }
+
+    .image_button1 {
+      position: absolute;
+      top: 83%;
+      left: 530px;
+    }
+
+    .image_button2 {
+      position: absolute;
+      top: 83%;
+      right: 30px;
+    }
+
+    .hvid_logo {
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      z-index: -1;
+      right: 430px;
+      text-align: center;
+    }
+
+    .intropriser {
+      margin: 4rem;
+    }
+
+    .for_img,
+    .efter_img {
+      margin: 5rem;
+      padding: 0;
+      height: 50%;
+      width: 50%;
+    }
+  }
+</style>
