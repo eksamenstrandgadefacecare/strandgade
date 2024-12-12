@@ -8,6 +8,16 @@ import "../styles/global.css";
 </button>
 
 <style>
+  button {
+    cursor: pointer;
+    font-family: "vidaloka", serif;
+    font-size: medium;
+    border-style: solid;
+    width: 160px;
+    height: 60px;
+    border-radius: 15px;
+    border-width: 2px;
+  }
   /* primære */
   [data-variant="primary"] {
     padding: 1em;
@@ -41,22 +51,5 @@ import "../styles/global.css";
     background-color: none;
     color: var(--Mørkgrøn);
     border-color: var(--Mørkgrøn);
-  }
-  button {
-    cursor: pointer;
-    font-family: "vidaloka", serif;
-    font-size: smaller;
-    border-style: solid;
-    width: 120px;
-    height: 50px;
-    border-radius: 15px;
-    border-width: 2px;
-  }
-  @media (width > 800px) {
-    button {
-      font-size: medium;
-      width: 160px;
-      height: 60px;
-    }
   }
 </style>
