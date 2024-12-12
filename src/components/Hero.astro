@@ -3,14 +3,13 @@ import "../styles/global.css";
 import Button from "./Button.astro";
 ---
 
-<section>
-  <h1 id="animation">Strandgade Facecare</h1>
-  <h2 id="animation" class="underoverskrift">Frisk hud med naturlig pleje, glød <br />og opstramning.</h2>
-  <Button variant="secondary">BOOK TID</Button>
-  <img id="animation" class="blad_top" src="/images/blad_top.svg" alt="" />
-  <img id="animation" class="blad_venstre" src="/images/blad_venstre.svg" alt="" />
-  <img id="animation" class="blad_hojre" src="/images/blad_hojre.svg" alt="" />
-  <!-- <img src="/images/behandlinger.webp" alt="" /> -->
+<section class="animation">
+  <h1>Strandgade Facecare</h1>
+  <h2 class="underoverskrift">Frisk hud med naturlig pleje, glød <br />og opstramning.</h2>
+  <div class="knap"><Button variant="primary">BOOK TID</Button></div>
+  <img class="blad_top" src="/images/blad_top.svg" alt="illustration af blad" />
+  <img class="blad_venstre" src="/images/blad_venstre.svg" alt="illustration af blad" />
+  <img class="blad_hojre" src="/images/blad_hojre.svg" alt="illustration af blad" />
 </section>
 
 <style>
@@ -27,9 +26,13 @@ import Button from "./Button.astro";
       opacity: 100%;
     }
   }
-  #animation {
+  .animation {
     animation-name: fade_in_kf;
     animation-duration: 5s;
+  }
+
+  .knap {
+    text-align: center;
   }
   .blad_top {
     position: absolute;
@@ -48,17 +51,15 @@ import Button from "./Button.astro";
     top: -350px;
   }
 
-  .blad_højre {
-    display: none;
-  }
-
-  /* .blad_hojre {
+  .blad_hojre {
     position: absolute;
     width: 50%;
     overflow: hidden;
+    z-index: -1;
     right: 0;
     top: 190px;
-  } */
+    display: none;
+  }
 
   /* DESKTOP */
   @media (min-width: 800px) {
@@ -86,8 +87,14 @@ import Button from "./Button.astro";
       overflow: hidden;
       right: 0;
       top: 150px;
+      z-index: -1;
+      display: block;
     }
     .underoverskrift {
+      padding: 5rem;
+    }
+
+    .knap {
       padding: 5rem;
     }
   }
