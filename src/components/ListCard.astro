@@ -7,10 +7,14 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
 
 <!-- <a href={data.slug + "/"}> -->
 <a href=`/product/${slug}`>
-  <li>
-    <figure>
+  <li class="grid">
+    <figure class="h2">
       <h2>{behandling}</h2>
-      <p>{beskrivelse_kort}</p>
+    </figure>
+    <figure class="p">
+      <p class="pfont">{beskrivelse_kort}</p>
+    </figure>
+    <figure class="img">
       <img src={"images/" + imglist} alt="imglist}" />
     </figure>
     <div class="button">
@@ -22,7 +26,7 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
 
 <style>
   a {
-    cursor: default;
+    cursor: pointer;
     color: black;
     text-decoration: none;
   }
@@ -33,5 +37,36 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
 
   img {
     padding: 1.5rem 0%;
+  }
+
+  @media (width > 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .h2 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .p {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .button {
+      grid-column: 2;
+      grid-row: 3;
+    }
+    .img {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .pfont {
+      font-size: var(--Brødtekst-Size-Mobile);
+      margin: 0;
+      line-height: 1.8rem;
+    }
   }
 </style>
