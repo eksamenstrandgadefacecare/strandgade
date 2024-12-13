@@ -76,17 +76,16 @@ h4 {
 
 /*
 
-
 Herunder har vi alt overordnet :root samlet, som vi henviser til med var()
 */
 
 :root {
   /* Font Size Desktop*/
-  --H1-Size-Desktop: 7rem;
-  --H2-Size-Desktop: 3rem;
+  --H1-Size-Desktop: 6.2rem;
+  --H2-Size-Desktop: 2.4rem;
   --H3-Size-Desktop: 2rem;
   --H4-Size-Desktop: 1.5rem;
-  --Brødtekst-Size-Desktop: 1.1rem;
+  --Brødtekst-Size-Desktop: 1rem;
 
   /* Font Size Mobile*/
   --H1-Size-Mobile: 4rem;

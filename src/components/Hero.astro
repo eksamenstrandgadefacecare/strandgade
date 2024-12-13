@@ -5,14 +5,27 @@ import Button from "./Button.astro";
 
 <section class="animation">
   <h1>Strandgade Facecare</h1>
-  <h2 class="underoverskrift">Frisk hud med naturlig pleje, glød <br />og opstramning.</h2>
+  <h2 class="underoverskrift">
+    Frisk hud med naturlig pleje, glød <br />og opstramning.
+  </h2>
   <div class="knap"><Button variant="primary">BOOK TID</Button></div>
   <img class="blad_top" src="/images/blad_top.svg" alt="illustration af blad" />
-  <img class="blad_venstre" src="/images/blad_venstre.svg" alt="illustration af blad" />
-  <img class="blad_hojre" src="/images/blad_hojre.svg" alt="illustration af blad" />
+  <img
+    class="blad_venstre"
+    src="/images/blad_venstre.svg"
+    alt="illustration af blad"
+  />
+  <img
+    class="blad_hojre"
+    src="/images/blad_hojre.svg"
+    alt="illustration af blad"
+  />
 </section>
 
 <style>
+  section {
+    margin-bottom: -20rem;
+  }
   h1,
   h2 {
     text-align: center;
@@ -63,6 +76,9 @@ import Button from "./Button.astro";
 
   /* DESKTOP */
   @media (min-width: 800px) {
+    section {
+      margin-bottom: 0;
+    }
     .blad_top {
       position: absolute;
       top: 0;
