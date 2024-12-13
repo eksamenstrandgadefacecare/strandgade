@@ -7,7 +7,9 @@ import Button from "./Button.astro";
   <div class="container">
     <div class="subcontainer">
       <nav class="navbar">
-        <a href="/"><img class="logo" src="/images/logo_desktop.svg" alt="Logo" /></a>
+        <a href="/"
+          ><img class="logo" src="/images/logo_desktop.svg" alt="Logo" /></a
+        >
         <ul class="nav-menu">
           <li class="nav-item">
             <a class="nav-link" href="/">FORSIDE</a>
@@ -25,7 +27,6 @@ import Button from "./Button.astro";
         </ul>
 
         <div class="hamburger">
-          <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
@@ -67,6 +68,9 @@ import Button from "./Button.astro";
   }
 
   .container {
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
     width: 100%;
     margin: auto;
   }
@@ -94,7 +98,6 @@ import Button from "./Button.astro";
   .hamburger {
     display: block;
     cursor: pointer;
-    margin: 0.5rem;
   }
 
   .bar {
@@ -140,8 +143,8 @@ import Button from "./Button.astro";
   }
 
   .logo {
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
     margin: 0.5rem;
   }
 
@@ -161,8 +164,10 @@ import Button from "./Button.astro";
     }
     .nav-item {
     }
-
     .logo {
+      height: 80px;
+      width: 80px;
+      margin: 0.5rem;
     }
   }
 </style>
