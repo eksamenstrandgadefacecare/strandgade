@@ -24,12 +24,13 @@ const { behandling, beskrivelse_lang, imgsingle } = Astro.props;
 
 <MainLayout>
   <section>
-    <h2>{behandling}</h2>
-    <p>{beskrivelse_lang}</p>
-    <img src={"images/" + imgsingle} alt="imglist}" />
+    <h2>{behandling.behandling}</h2>
+    <img src={`/images/${behandling.imgsingle}`} alt={behandling.behandling} />
+    <p>{behandling.beskrivelse_lang}</p>
+    <p>{behandling.pris}</p>
     <div class="button">
-      <Button variant="secondary">BOOK TID</Button>
-      <Button variant="secondary">LÆS MERE</Button>
+      <Button variant="primary">BOOK TID</Button>
+      <Button variant="primary">LÆS MERE</Button>
     </div>
   </section>
 </MainLayout>
