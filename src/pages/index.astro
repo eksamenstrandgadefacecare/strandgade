@@ -13,7 +13,7 @@ import Button from "../components/Button.astro";
       <div class="image_button1"><Button variant="secondary">BEHANDLINGER</Button></div>
     </div>
     <div>
-      <img src="images/produkter.webp" alt="" />
+      <img src="images/produkt_bagg.webp" alt="" />
       <div class="image_button2"><Button variant="secondary">PRODUKTER</Button></div>
     </div>
   </section>
@@ -33,18 +33,18 @@ import Button from "../components/Button.astro";
   </section>
   <section class="for_eftercard">
     <div class="for_img">
-      <h2>Før</h2>
+      <h2 class="for_overskrift">Før</h2>
       <img src="images/før.webp" alt="før billede af skønhedsbehandling" />
     </div>
     <div class="efter_img">
-      <h2>Efter</h2>
+      <h2 class="efter_overskrift">Efter</h2>
       <img src="images/efter.webp" alt="efter billede af skønhedsbehandling" />
     </div>
+    <div class="for_eftertekst">
+      <p>Hanne, 52</p>
+      <p>Japansk lifting ansigtsbehandling</p>
+    </div>
   </section>
-  <div class="for_eftertekst">
-    <p>Hanne, 52</p>
-    <p>Japansk lifting ansigtsbehandling</p>
-  </div>
 </MainLayout>
 
 <style>
@@ -100,12 +100,22 @@ import Button from "../components/Button.astro";
   .for_eftercard {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0.2rem;
+    margin: 1rem;
   }
 
   .for_img,
   .efter_img {
-    padding: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .for_eftertekst {
+    text-align: left;
+  }
+
+  .for_overskrift,
+  .efter_overskrift {
+    text-align: left;
+    margin-bottom: -30px;
   }
 
   /* DESKTOP */
@@ -141,12 +151,29 @@ import Button from "../components/Button.astro";
       margin: 4rem;
     }
 
-    .for_img,
-    .efter_img {
-      margin: 5rem;
-      padding: 0;
-      height: 50%;
+    .for_img {
       width: 50%;
+      height: 50%;
+      margin: 0.2rem;
+      align-items: center;
+      display: block;
+      margin-left: auto;
+      margin-right: -2px;
+    }
+    .efter_img {
+      width: 50%;
+      height: 50%;
+      margin: 0.2rem;
+      align-items: center;
+      display: block;
+      margin-left: -2px;
+      margin-right: auto;
+    }
+
+    .for_eftertekst {
+      text-align: left;
+      align-items: center;
+      margin-left: 250px;
     }
   }
 </style>
