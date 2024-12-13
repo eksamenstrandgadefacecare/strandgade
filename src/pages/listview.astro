@@ -31,4 +31,54 @@ console.log(behandlinger);
       })
     }
   </ul>
+
+  <section>
+    <h2>Kombinationer</h2>
+    <p>
+      De forskellige behandlingstyper kan med stor fordel kombineres for at give
+      et endnu bedre resultat. Her kan du se en række eksempler:
+    </p>
+    <section class="kombinationer">
+      <div>
+        <strong><p>Deluxe Oxygen Facelift</p></strong>
+        <p>Japansk Lifting + Oxygenbehandling</p>
+        <p>1 time og 30 min.: 795,-</p>
+      </div>
+      <div>
+        <strong><p>Diamant peeling & Japansk Lifting</p></strong>
+        <p>1 time og 15 min.: 695,-</p>
+      </div>
+      <div>
+        <strong><p>Diamant peeling og Oxygen behandling</p></strong>
+        <p>1 time: 725,-</p>
+      </div>
+      <div>
+        <strong><p>Lysbehandling i kombination med anden behandling</p></strong>
+        <p>Lysbehandling kan kombineres med alle mine øvrige behandlinger.</p>
+        <p>20 minutter: 175,-</p>
+      </div>
+    </section>
+  </section>
 </MainLayout>
+
+<style>
+  .kombinationer {
+    text-align: center;
+  }
+
+  div:last-child /* Sørger for mere afstand ned til footer */ {
+    margin-bottom: 8rem;
+  }
+
+  @media (max-width: 799px) /* Mobilestørrelse */ {
+    div {
+      margin: 2rem 0;
+    }
+  }
+
+  @media (min-width: 800px) /* computerstørrelse */ {
+    div {
+      margin: 5rem 0;
+    }
+  }
+</style>
