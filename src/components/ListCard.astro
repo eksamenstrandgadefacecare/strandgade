@@ -5,24 +5,21 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
   Astro.props;
 ---
 
-<!-- <a href={data.slug + "/"}> -->
-<a href=`/product/${slug}`>
-  <li class="grid">
-    <figure class="h2">
-      <h2>{behandling}</h2>
-    </figure>
-    <figure class="p">
-      <p class="pfont">{beskrivelse_kort}</p>
-    </figure>
-    <figure class="img">
-      <img src={"images/" + imglist} alt="imglist}" />
-    </figure>
-    <div class="button">
-      <Button variant="primary">BOOK TID</Button>
-      <Button variant="primary">LÆS MERE</Button>
-    </div>
-  </li>
-</a>
+<li>
+  <figure>
+    <a class="grid" href=`/product/${slug}`>
+      <div class="tekst">
+        <h2>{behandling}</h2>
+        <p>{beskrivelse_kort}</p>
+      </div>
+      <img class="img" src={"images/" + imglist} alt={imglist} />
+      <div class="button">
+        <Button variant="primary">BOOK TID</Button>
+        <Button variant="primary">LÆS MERE</Button>
+      </div>
+    </a>
+  </figure>
+</li>
 
 <style>
   a {
@@ -35,38 +32,52 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
     text-align: center;
   }
 
-  img {
-    padding: 1.5rem 0%;
+  @media (max-width: 799px) {
+    img {
+      margin: 1.5rem 0;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    .button {
+      margin-bottom: 4rem;
+    }
   }
 
-  @media (width > 800px) {
+  @media (min-width: 800px) {
+    li {
+      margin: 8rem 0;
+    }
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
     }
 
-    .h2 {
+    .tekst {
       grid-column: 2;
       grid-row: 1;
     }
-    .p {
-      grid-column: 2;
-      grid-row: 2;
+
+    p {
+      margin: 0 10%;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
     }
     .button {
+      display: flex;
+      align-items: flex-end; /* placerer knapperne i bunden */
       grid-column: 2;
-      grid-row: 3;
+      grid-row: 1;
+      margin-bottom: 3.5rem; /* rykker knapperne opad */
+      margin-left: auto;
+      margin-right: auto;
+      gap: 2rem; /* afstand mellem knapperne */
     }
     .img {
       grid-column: 1;
       grid-row: 1;
-    }
-
-    .pfont {
-      font-size: var(--Brødtekst-Size-Mobile);
-      margin: 0;
-      line-height: 1.8rem;
     }
   }
 </style>
