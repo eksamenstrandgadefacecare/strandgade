@@ -19,24 +19,88 @@ export async function getStaticPaths() {
   }));
 }
 
-const { behandling, beskrivelse_lang, imgsingle } = Astro.props;
+const {
+  behandling,
+  beskrivelse_lang,
+  imgsingle,
+  tid,
+  enkeltbehanding,
+  flerbehanding,
+  intro,
+} = Astro.props;
 ---
 
 <MainLayout>
-  <section>
-    <h2>{behandling.behandling}</h2>
+  <section class="grid">
+    <div class="tekst">
+      <h2>{behandling.behandling}</h2>
+      <p>{behandling.beskrivelse_lang}</p>
+
+      <p class="detaljerp">{behandling.tid}</p>
+      <p class="detaljerp">{behandling.enkeltbehanding}</p>
+      <p class="detaljerp">{behandling.flerbehanding}</p>
+      <p class="detaljerp">{behandling.intro}</p>
+    </div>
     <img src={`/images/${behandling.imgsingle}`} alt={behandling.behandling} />
-    <p>{behandling.beskrivelse_lang}</p>
-    <p>{behandling.pris}</p>
     <div class="button">
       <Button variant="primary">BOOK TID</Button>
-      <Button variant="primary">LÆS MERE</Button>
     </div>
   </section>
 </MainLayout>
 
 <style>
-  .button {
-    text-align: center;
+  a {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
+  .detaljerp {
+    font-weight: bold;
+    margin-top: 1.3rem;
+  }
+
+  @media (max-width: 799px) /* Mobilestørrelse */ {
+    img {
+      margin: 1.5rem 0;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    .button {
+      margin-bottom: 4rem;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 800px) /* computerstørrelse */ {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+    .tekst {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    p {
+      margin: 0 10%;
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+    .button {
+      display: flex;
+      align-items: flex-end; /* placerer knapperne i bunden */
+      grid-column: 2;
+      grid-row: 1;
+      margin-bottom: 1.5rem; /* rykker knapperne opad */
+      margin-left: auto;
+      margin-right: auto;
+      gap: 2rem; /* afstand mellem knapperne */
+    }
+    .img {
+      grid-column: 1;
+      grid-row: 1;
+    }
   }
 </style>
