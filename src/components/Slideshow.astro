@@ -1,0 +1,227 @@
+---
+
+---
+
+<p class="tegn">“</p>
+<section>
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+    <!-- Full-width slides/quotes -->
+    <div class="mySlides">
+      <q
+        >Fik japansk lifting og diamant peeling. Love it!! Min hud føles super
+        blød og behandlingen har givet den helt nyt liv!! Kan varmt anbefales</q
+      >
+      <p>Caroline Granados 59 år</p>
+    </div>
+
+    <div class="mySlides">
+      <q>Rigtig god service og fantastisk oplevelse med diamant peeling</q>
+      <p>Sonja thomsen 47 år</p>
+    </div>
+
+    <div class="mySlides">
+      <q>Punktlighed, renlighed, kvalitet, professionalisme og priser</q>
+      <p>Caroline Granados 59 år</p>
+    </div>
+
+    <!-- Next/prev buttons -->
+    <a class="prev" aria-label="Previous slide">&#10094;</a>
+    <a class="next" aria-label="Next slide">&#10095;</a>
+  </div>
+
+  <!-- Dots/bullets/indicators -->
+  <div class="dot-container">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<style>
+  .tegn {
+    font-size: 15rem;
+    font-family: "Vidaloka", serif;
+    text-align: center;
+    margin-top: 12rem;
+  }
+
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+  }
+
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    visibility: hidden; /* Hidden by default */
+  }
+
+  .mySlides.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: rgba(50, 70, 33, 1);
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* The dot/bullet/indicator container */
+  .dot-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgba(157, 165, 126, 1);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  /* Add a background color to the active dot/circle */
+  .active,
+  .dot:hover {
+    background-color: rgba(50, 70, 33, 1);
+  }
+
+  /* Add an italic font style to all quotes */
+  q {
+    font-style: italic;
+    font-size: 1.4rem;
+  }
+  p {
+    font-weight: bold;
+    margin-top: 1.5rem;
+  }
+
+  /* Mobil størrelse */
+  @media (max-width: 799px) {
+    .mySlides {
+      padding: 20px;
+    }
+
+    .prev,
+    .next {
+      font-size: 16px;
+      padding: 12px;
+    }
+
+    .dot-container {
+      padding: 10px;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+    }
+
+    section {
+      margin-bottom: 5rem;
+    }
+  }
+
+  /* Computer størrelse */
+  @media (min-width: 800px) {
+    section {
+      margin-left: 8rem;
+      margin-right: 8rem;
+      margin-bottom: 7rem;
+    }
+    .tegn {
+      margin-bottom: -3rem;
+    }
+  }
+</style>
+
+<script>
+  // Initial slide index
+  let slideIndex = 1;
+
+  // Show the first slide
+  showSlides(slideIndex);
+
+  // Function to go to the next/previous slide
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  // Function to jump to a specific slide
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  // Function to display the slide
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    // If the slide index is greater than the number of slides, go back to the first
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+
+    // If the slide index is less than 1, go to the last slide
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    // Hide all slides
+    for (i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+    }
+
+    // Remove the "active" class from all dots
+    for (i = 0; i < dots.length; i++) {
+      dots[i].classList.remove("active");
+    }
+
+    // Show the current slide and add the "active" class to the corresponding dot
+    slides[slideIndex - 1].classList.add("show");
+    dots[slideIndex - 1].classList.add("active");
+  }
+
+  // Add event listeners for the navigation buttons
+  document
+    .querySelector(".prev")
+    .addEventListener("click", () => plusSlides(-1));
+  document
+    .querySelector(".next")
+    .addEventListener("click", () => plusSlides(1));
+
+  // Add event listeners for the dots
+  const dots = document.querySelectorAll(".dot");
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => currentSlide(index + 1)); // +1 because index starts at 0
+  });
+</script>
