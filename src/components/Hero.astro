@@ -8,7 +8,11 @@ import Button from "./Button.astro";
   <h2 class="underoverskrift">
     Frisk hud med naturlig pleje, glød <br />og opstramning.
   </h2>
-  <div class="knap"><Button variant="primary">BOOK TID</Button></div>
+  <div class="knap">
+    <a href="https://strandgadefacecare.onlinebooq.dk">
+      <Button variant="primary">BOOK TID</Button></a
+    >
+  </div>
   <img class="blad_top" src="/images/blad_top.svg" alt="illustration af blad" />
   <img
     class="blad_venstre"
@@ -31,7 +35,7 @@ import Button from "./Button.astro";
     text-align: center;
   }
 
-  @keyframes fade_in_kf {
+  /* @keyframes fade_in_kf {
     from {
       opacity: 0%;
     }
@@ -42,7 +46,7 @@ import Button from "./Button.astro";
   .animation {
     animation-name: fade_in_kf;
     animation-duration: 5s;
-  }
+  } */
 
   .knap {
     text-align: center;

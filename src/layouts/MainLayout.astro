@@ -25,9 +25,23 @@ import Header from "../components/Header.astro";
     />
     <title>Astro</title>
   </head>
-  <body>
+  <body class="animation">
     <Header />
     <slot />
     <Footer />
   </body>
 </html>
+<style>
+  @keyframes fade_in_kf {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  .animation {
+    animation-name: fade_in_kf;
+    animation-duration: 3s;
+  }
+</style>

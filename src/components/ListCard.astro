@@ -12,7 +12,7 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
         <h2>{behandling}</h2>
         <p>{beskrivelse_kort}</p>
       </div>
-      <img class="img" src={"images/" + imglist} alt={imglist} />
+      <img class="img" src={"/images/" + imglist} alt={imglist} />
       <div class="button">
         <Button variant="primary">BOOK TID</Button>
         <Button variant="primary">LÆS MERE</Button>
@@ -77,11 +77,11 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
   }
 </style>
 
-<script>
+<!-- <script>
   import { animate, scroll, inView } from "motion";
 
   scroll(animate(".grid", { opacity: [0.5, 1] }), {
     target: document.querySelector(".grid"),
     offset: ["start center", "end center"],
   });
-</script>
+</script> -->
