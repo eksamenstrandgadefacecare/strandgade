@@ -129,3 +129,12 @@ console.log(behandlinger);
     }
   }
 </style>
+
+<script>
+  import { animate, scroll, inView } from "motion";
+
+  scroll(animate(".kombinationer", { opacity: [0.2, 1] }), {
+    target: document.querySelector(".kombinationer"),
+    offset: ["start center", "end center"],
+  });
+</script>

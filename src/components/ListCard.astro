@@ -14,9 +14,7 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
       </div>
       <img class="img" src={"images/" + imglist} alt={imglist} />
       <div class="button">
-        <a href="https://strandgadefacecare.onlinebooq.dk"
-          ><Button variant="primary">BOOK TID</Button>
-        </a>
+        <Button variant="primary">BOOK TID</Button>
         <Button variant="primary">LÆS MERE</Button>
       </div>
     </a>
@@ -78,3 +76,12 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
     }
   }
 </style>
+
+<script>
+  import { animate, scroll, inView } from "motion";
+
+  scroll(animate(".grid", { opacity: [0.5, 1] }), {
+    target: document.querySelector(".grid"),
+    offset: ["start center", "end center"],
+  });
+</script>
