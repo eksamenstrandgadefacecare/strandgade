@@ -24,14 +24,15 @@ console.log(behandlinger);
     skønhedsbehandlinger, der både fremhæver din naturlige skønhed og giver dig
     en stund med afslapning og selvforkælelse. Vi udbyder følgende behandlinger:
   </p>
-  <ul>
-    {
-      behandlinger.map((behandling: any) => {
-        return <Listcard {...behandling} />;
-      })
-    }
-  </ul>
-
+  <section class="margin">
+    <ul>
+      {
+        behandlinger.map((behandling: any) => {
+          return <Listcard {...behandling} />;
+        })
+      }
+    </ul>
+  </section>
   <section>
     <h2>Kombinationer</h2>
     <p>
@@ -58,10 +59,16 @@ console.log(behandlinger);
         <p>20 minutter: 175,-</p>
       </div>
     </section>
+    <img class="firkløver1" src="images/firkløver.svg" alt="" />
+    <img class="firkløver2" src="images/firkløver.svg" alt="" />
   </section>
 </MainLayout>
 
 <style>
+  .margin {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   .kombinationer {
     text-align: center;
   }
@@ -70,6 +77,24 @@ console.log(behandlinger);
     margin-bottom: 8rem;
   }
 
+  .firkløver1 {
+    position: absolute;
+    top: 237rem;
+    left: -1rem;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .firkløver2 {
+    position: absolute;
+    top: 277rem;
+    left: 18rem;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+  }
   @media (max-width: 799px) /* Mobilestørrelse */ {
     div {
       margin: 2rem 0;
@@ -77,8 +102,30 @@ console.log(behandlinger);
   }
 
   @media (min-width: 800px) /* computerstørrelse */ {
+    .margin {
+      margin-left: 5rem;
+      margin-right: 5rem;
+    }
     div {
-      margin: 5rem 0;
+      margin: 2.5rem 0;
+    }
+    .firkløver1 {
+      position: absolute;
+      top: 200rem;
+      left: 0;
+      width: 25%;
+      height: auto;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .firkløver2 {
+      position: absolute;
+      top: 222rem;
+      left: 64rem;
+      width: 25%;
+      height: auto;
+      z-index: -1;
+      overflow: hidden;
     }
   }
 </style>

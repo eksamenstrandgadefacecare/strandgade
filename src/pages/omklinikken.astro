@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout>
   <h2>Om klinikken</h2>
-  <section>
+  <section class="grid_1-1">
     <div class="portræt">
       <img class="center" src="images/portræt.webp" alt="protræt" />
     </div><div>
@@ -19,7 +19,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       </p>
     </div>
   </section>
-  <section>
+  <section class="grid_1-1">
     <div>
       <h3>Klinikkens beliggenhed</h3><p>
         Min klinik, Strandgade Facecare, åbnede i 2016 og ligger på
@@ -29,42 +29,38 @@ import MainLayout from "../layouts/MainLayout.astro";
       </p>
     </div>
     <div>
-      <img class="center" src="images/kort.webp" alt="christianshavn" />
+      <img class="center" src="images/beliggenhed.webp" alt="christianshavn" />
     </div>
   </section>
-  <h2>Kontakt mig</h2>
   <section>
-    <div>
-      <!-- <div>
-        <ul>
-          <li>+45 22 75 92 60</li>
-          <li>post@strandgadefacecare.dk</li>
-          <li>Strandgade 40 st, 1401 København K</li>
-        </ul>
-      </div> -->
+    <h2>Kontakt mig</h2>
+    <div class="grid_1-1">
       <div>
-        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
-        <p>+45 22 75 92 60</p>
+        <div>
+          <img class="ikon" src="images/telefon.svg" alt="telefon ikon" />
+          <p>+45 22 75 92 60</p>
+        </div>
+        <div>
+          <img class="ikon" src="images/mail.svg" alt="mail ikon" />
+          <p>post@strandgadefacecare.dk</p>
+        </div>
+        <div>
+          <img class="ikon" src="images/adressehus.svg" alt="adressehus ikon" />
+          <p>Strandgade 40 st, 1401 København K</p>
+        </div>
       </div>
       <div>
-        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
-        <p>post@strandgadefacecare.dk</p>
+        <img class="center" src="images/kort.webp" alt="kort til navigation" />
       </div>
-      <div>
-        <img class="logo" src="/images/logo_desktop.svg" alt="Logo" />
-        <p>Strandgade 40 st, 1401 København K</p>
-      </div>
-    </div>
-    <div>
-      <img class="center" src="images/kort.webp" alt="kort til navigation" />
     </div>
   </section>
 </MainLayout>
 
 <style>
   section {
-    margin-top: 3rem;
-    margin: 1.5rem;
+    margin-top: 2rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
   }
   h3 {
     margin: 1.5rem;
@@ -72,11 +68,6 @@ import MainLayout from "../layouts/MainLayout.astro";
   img {
     margin-top: 0.5rem;
   }
-  /* .portræt {
-    width: 50%;
-    height: auto;
-    width: 70%; 
-  }*/
   p {
     margin: 0;
     margin-left: 5rem;
@@ -89,16 +80,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     margin-left: auto;
     margin-right: auto;
   }
-  .logo {
+  .ikon {
     height: auto;
     width: 1.5rem;
-    /* margin: 0.5rem; */
   }
   @media (width > 800px) {
-    section {
+    .grid_1-1 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0;
     }
   }
 </style>
