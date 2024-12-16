@@ -6,14 +6,18 @@ import MainLayout from "../layouts/MainLayout.astro";
   <h2>Om klinikken</h2>
   <section class="grid_1-1">
     <div class="portræt">
-      <img class="center" src="images/portræt.webp" alt="protræt" />
-    </div><div>
-      <h3>Uddannelsesbaggrund</h3><p>
+      <img src="images/portræt.webp" alt="protræt" />
+    </div>
+    <div>
+      <h3>Uddannelsesbaggrund</h3>
+      <p>
         Jeg er certificeret i Japansk Cosmo Lifting og uddannet Elleebana Lash
         Lift stylist. Før jeg skiftede karriere, arbejdede jeg i mange år som
         sygeplejerske, hvilket har givet mig en solid baggrund inden for omsorg
         og behandling.
-      </p><h3>Produkter</h3><p>
+      </p>
+      <h3>Produkter</h3>
+      <p>
         I de fleste behandlinger anvender jeg DermaOXY´s danske
         hudplejeprodukter, som også kan købes i klinikken.
       </p>
@@ -21,7 +25,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   </section>
   <section class="grid_1-1">
     <div>
-      <h3>Klinikkens beliggenhed</h3><p>
+      <h3>Klinikkens beliggenhed</h3>
+      <p>
         Min klinik, Strandgade Facecare, åbnede i 2016 og ligger på
         Christianshavn i et charmerende klassisk hus fra 1700-tallet. Her skaber
         jeg en hyggelig og afslappende atmosfære, der er perfekt til
@@ -29,65 +34,55 @@ import MainLayout from "../layouts/MainLayout.astro";
       </p>
     </div>
     <div>
-      <img class="center" src="images/beliggenhed.webp" alt="christianshavn" />
+      <img src="images/beliggenhed.webp" alt="christianshavn" />
     </div>
   </section>
-  <section>
+  <section class="kontakt">
     <h2>Kontakt mig</h2>
     <div class="grid_1-1">
-      <div>
-        <div>
-          <img class="ikon" src="images/telefon.svg" alt="telefon ikon" />
-          <p>+45 22 75 92 60</p>
-        </div>
-        <div>
-          <img class="ikon" src="images/mail.svg" alt="mail ikon" />
-          <p>post@strandgadefacecare.dk</p>
-        </div>
-        <div>
-          <img class="ikon" src="images/adressehus.svg" alt="adressehus ikon" />
-          <p>Strandgade 40 st, 1401 København K</p>
-        </div>
-      </div>
-      <div>
-        <img class="center" src="images/kort.webp" alt="kort til navigation" />
+      <img src="images/kort.webp" alt="kort til navigation" />
+      <div class="ikoncontainer">
+        <img src="images/telefon.svg" alt="telefon" />
+        <p class="ikonp">+45 22 75 92 60</p>
+
+        <img src="images/mail.svg" alt="mail" />
+        <p class="ikonp">post@strandgadefacecare.dk</p>
+
+        <img src="images/adressehus.svg" alt="adressehus" />
+        <p class="ikonp">Strandgade 40 st, 1401 København K</p>
       </div>
     </div>
   </section>
-</MainLayout>
 
-<style>
-  section {
-    margin-top: 2rem;
-    margin-left: 0.8rem;
-    margin-right: 0.8rem;
-  }
-  h3 {
-    margin: 1.5rem;
-  }
-  img {
-    margin-top: 0.5rem;
-  }
-  p {
-    margin: 0;
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-  .center {
-    width: 70%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ikon {
-    height: auto;
-    width: 1.5rem;
-  }
-  @media (width > 800px) {
-    .grid_1-1 {
+  <style>
+    .ikoncontainer {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 22fr;
+      align-items: center;
+      gap: 1.5rem;
+      margin-left: 8rem;
     }
-  }
-</style>
+    .ikonp {
+      margin: 0;
+    }
+    .kontakt {
+      margin-bottom: 8rem;
+    }
+    p {
+      margin: 0;
+    }
+    h3 {
+      margin-bottom: 2rem;
+      margin-top: 4rem;
+    }
+
+    @media (width > 800px) {
+      .grid_1-1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin: 4rem 10rem;
+      }
+    }
+  </style>
+</MainLayout>
