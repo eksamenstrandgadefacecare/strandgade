@@ -1,6 +1,7 @@
 ---
 const { variant = "primary", size = "medium" } = Astro.props;
 import "../styles/global.css";
+const { href } = Astro.props;
 ---
 
 <button data-variant={variant} data-size={size}>
@@ -13,15 +14,18 @@ import "../styles/global.css";
     padding: 1em;
     background-color: var(--Mørkgrøn);
     color: var(--Beige);
+    border-color: var(--Mørkgrøn);
   }
   [data-variant="primary"]:hover {
     background-color: var(--Lysgrøn);
     color: var(--Beige);
+    border-color: var(--Lysgrøn);
   }
 
   [data-variant="primary"]:active {
     background: transparent;
     color: var(--Mørkgrøn);
+    border-color: var(--Mørkgrøn);
   }
   /* sekundær */
   [data-variant="secondary"] {
