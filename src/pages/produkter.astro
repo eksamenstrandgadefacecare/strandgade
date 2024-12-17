@@ -47,43 +47,6 @@ import "../styles/global.css";
       <br />
       <h5 class="pris">Pris: 395,-</h5>
     </div>
-    <!-- test med flere rækker af produkter -->
-    <div>
-      <img class="images" src="/images/facewash.webp" alt="dermaoxy facewash" />
-      <h3>dermaOXY facewash</h3>
-      <br />
-      <ul style="specifikationer" class="beskrivelse">
-        <li>Forebygger tilstoppede porer</li>
-      </ul>
-      <br />
-      <h5 class="pris">Pris: 250,-</h5>
-    </div>
-
-    <div>
-      <img class="images" src="/images/daycream.webp" alt="dermaoxy facewash" />
-      <h3>dermaOXY day cream</h3>
-      <br />
-      <ul style="specifikationer" class="beskrivelse">
-        <li>Reducere pigment pletter</li>
-      </ul>
-      <br />
-      <h5 class="pris">Pris: 395,-</h5>
-    </div>
-
-    <div>
-      <img
-        class="images"
-        src="/images/nightcream.webp"
-        alt="dermaoxy facewash"
-      />
-      <h3>dermaOXY night cream</h3>
-      <br />
-      <ul style="specifikationer" class="beskrivelse">
-        <li>Stimulerer fornyelsen af huden</li>
-      </ul>
-      <br />
-      <h5 class="pris">Pris: 395,-</h5>
-    </div>
   </section>
 </MainLayout>
 
@@ -94,53 +57,19 @@ import "../styles/global.css";
   div {
     margin-top: 2rem;
   }
-  div img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1rem;
-    /* width: 50%; */
-  }
-  .daycream {
-    width: 40%;
-    height: auto;
-  }
-  .images {
-    width: 45%;
-    height: auto;
-  }
-  .beskrivelse {
-    margin: 0;
-    text-align: center;
+
+  img {
+    width: 200px;
+    height: 450px;
   }
 
-  .pris {
-    text-align: center;
-  }
-
-  /* .specifikationer{
-    text-align: center;
-    align-items: center;
-  } */
   @media (width > 800px) {
     section {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      /* align-items: center;
-          padding: 5rem; */
-    }
-    div {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
-
-    .daycream {
-      width: 40%;
-      height: auto;
-    }
-    .images {
-      width: 45%;
-      height: auto;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 7rem;
     }
   }
 </style>
