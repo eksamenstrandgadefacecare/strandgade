@@ -20,15 +20,8 @@ export async function getStaticPaths() {
   }));
 }
 
-const {
-  behandling,
-  beskrivelse_lang,
-  imgsingle,
-  tid,
-  enkeltbehanding,
-  flerbehanding,
-  intro,
-} = Astro.props;
+const { behandling } = Astro.props;
+console.log("BEHANDLING", behandling);
 ---
 
 <MainLayout>
@@ -38,8 +31,8 @@ const {
       <p>{behandling.beskrivelse_lang}</p>
 
       <p class="detaljerp">{behandling.tid}</p>
-      <p class="detaljerp">{behandling.enkeltbehanding}</p>
-      <p class="detaljerp">{behandling.flerbehanding}</p>
+      <p class="detaljerp">{behandling.enkeltbehandling}</p>
+      <p class="detaljerp">{behandling.flerbehandling}</p>
       <p class="detaljerp">{behandling.intro}</p>
     </div>
     <img src={`/images/${behandling.imgsingle}`} alt={behandling.behandling} />
