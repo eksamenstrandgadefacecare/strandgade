@@ -20,26 +20,23 @@ export async function getStaticPaths() {
   }));
 }
 
-const {
-  behandling,
-  beskrivelse_lang,
-  imgsingle,
-  tid,
-  enkeltbehanding,
-  flerbehanding,
-  intro,
-} = Astro.props;
+const { behandling } = Astro.props;
+console.log("BEHANDLING", behandling);
 ---
 
 <MainLayout>
+  <section class="pil">
+    <a href="/listview"><span style="font-size: 60px;">&#x2190;</span></a>
+  </section>
+
   <section class="grid">
     <div class="tekst">
       <h2>{behandling.behandling}</h2>
       <p>{behandling.beskrivelse_lang}</p>
 
       <p class="detaljerp">{behandling.tid}</p>
-      <p class="detaljerp">{behandling.enkeltbehanding}</p>
-      <p class="detaljerp">{behandling.flerbehanding}</p>
+      <p class="detaljerp">{behandling.enkeltbehandling}</p>
+      <p class="detaljerp">{behandling.flerbehandling}</p>
       <p class="detaljerp">{behandling.intro}</p>
     </div>
     <img src={`/images/${behandling.imgsingle}`} alt={behandling.behandling} />
@@ -51,6 +48,9 @@ const {
 </MainLayout>
 
 <style>
+  .pil {
+    margin-top: 3rem;
+  }
   a {
     cursor: pointer;
     color: black;

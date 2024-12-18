@@ -59,68 +59,157 @@ import Button from "../components/Button.astro";
       </div>
     </div>
   </section>
+</MainLayout>
+<style>
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition:
+      opacity 0.6s ease-out,
+      transform 1.2s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
 
-  <style>
-    p {
-      margin: 0;
+  p {
+    margin: 0;
+  }
+  .cards {
+    /* Dette er den første section med billeder (behandlinger og produkter) */
+    display: grid;
+    position: relative;
+  }
+
+  /* Knapper  */
+  .image_button1 {
+    position: absolute;
+    top: 38%;
+    right: 18px;
+  }
+  .image_button2 {
+    position: absolute;
+    top: 88%;
+    right: 18px;
+  }
+  .buttoncontainer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .behandling_list {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  li {
+    font-family: "Open Sans", sans-serif;
+    padding: 0.5rem;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: "Vidaloka", serif;
+  }
+
+  .naturlig_overskrift {
+    margin: 3rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+  }
+
+  .grid_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .firkløver1 {
+    position: absolute;
+    top: 80rem;
+    left: -1rem;
+    width: 25%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .firkløver2 {
+    position: absolute;
+    top: 99rem;
+    left: 18rem;
+    width: 30%;
+    height: auto;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  @media (max-width: 799px) {
+    .grid_1 {
+      margin-top: 4rem;
     }
+  }
+
+  /* DESKTOP */
+  @media (min-width: 800px) {
     .cards {
-      /* Dette er den første section med billeder (behandlinger og produkter) */
       display: grid;
+      grid-template-columns: 1fr 1fr;
       position: relative;
     }
 
-    /* Knapper  */
+    .grid_2-1 {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+
+    /* Knapperne ovenpå billederne */
     .image_button1 {
       position: absolute;
-      top: 38%;
-      right: 18px;
+      top: 83%;
+      left: 530px;
     }
     .image_button2 {
       position: absolute;
-      top: 88%;
-      right: 18px;
-    }
-    .buttoncontainer {
-      text-align: center;
-      margin-top: 2rem;
+      top: 83%;
+      right: 30px;
     }
 
-    .behandling_list {
-      text-align: center;
-      margin: 2rem;
+    .intropriser {
+      margin: 4rem;
     }
-
-    li {
-      font-family: "Open Sans", sans-serif;
-      padding: 0.5rem;
-      text-align: center;
-    }
-
-    h4 {
-      text-align: center;
-      font-family: "Vidaloka", serif;
-    }
-
-    .naturlig_overskrift {
-      margin: 2rem;
+    .for_eftertekst {
       text-align: left;
+      align-items: center;
+      margin-left: -95px;
     }
 
-    h3 {
-      margin-bottom: 1rem;
-      margin-top: 3rem;
+    .p_japansk {
+      margin: 3rem 2rem;
     }
 
-    .grid_1 {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    .centertekst {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .div_førefter {
+      grid-column: 1;
+      grid-row: 1;
     }
 
+    .section_førefter {
+      margin: 8rem 3rem;
+    }
     .firkløver1 {
       position: absolute;
-      top: 80rem;
-      left: -1rem;
+      top: 82rem;
+      left: 0;
       width: 25%;
       height: auto;
       z-index: -1;
@@ -128,88 +217,12 @@ import Button from "../components/Button.astro";
     }
     .firkløver2 {
       position: absolute;
-      top: 99rem;
-      left: 18rem;
-      width: 30%;
+      top: 96rem;
+      left: 66rem;
+      width: 25%;
       height: auto;
       z-index: -1;
       overflow: hidden;
     }
-
-    @media (max-width: 799px) {
-      .grid_1 {
-        margin-top: 4rem;
-      }
-    }
-
-    /* DESKTOP */
-    @media (min-width: 800px) {
-      .cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: relative;
-      }
-
-      .grid_2-1 {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-      }
-
-      /* Knapperne ovenpå billederne */
-      .image_button1 {
-        position: absolute;
-        top: 83%;
-        left: 530px;
-      }
-      .image_button2 {
-        position: absolute;
-        top: 83%;
-        right: 30px;
-      }
-
-      .intropriser {
-        margin: 4rem;
-      }
-      .for_eftertekst {
-        text-align: left;
-        align-items: center;
-        margin-left: -95px;
-      }
-
-      .p_japansk {
-        margin: 3rem 2rem;
-      }
-
-      .centertekst {
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .div_førefter {
-        grid-column: 1;
-        grid-row: 1;
-      }
-
-      .section_førefter {
-        margin: 8rem 3rem;
-      }
-      .firkløver1 {
-        position: absolute;
-        top: 82rem;
-        left: 0;
-        width: 25%;
-        height: auto;
-        z-index: -1;
-        overflow: hidden;
-      }
-      .firkløver2 {
-        position: absolute;
-        top: 96rem;
-        left: 66rem;
-        width: 25%;
-        height: auto;
-        z-index: -1;
-        overflow: hidden;
-      }
-    }
-  </style>
-</MainLayout>
+  }
+</style>
