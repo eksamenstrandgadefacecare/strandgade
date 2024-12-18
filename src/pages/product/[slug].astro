@@ -25,6 +25,10 @@ console.log("BEHANDLING", behandling);
 ---
 
 <MainLayout>
+  <section class="pil">
+    <a href="/listview"><span style="font-size: 60px;">&#x2190;</span></a>
+  </section>
+
   <section class="grid">
     <div class="tekst">
       <h2>{behandling.behandling}</h2>
@@ -44,6 +48,9 @@ console.log("BEHANDLING", behandling);
 </MainLayout>
 
 <style>
+  .pil {
+    margin-top: 3rem;
+  }
   a {
     cursor: pointer;
     color: black;
