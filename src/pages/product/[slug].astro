@@ -33,9 +33,13 @@ console.log("BEHANDLING", behandling);
     <div class="tekst">
       <h2>{behandling.behandling}</h2>
       <p>{behandling.beskrivelse_lang}</p>
+      <br />
 
-      <p class="detaljerp">{behandling.tid}</p>
-      <p class="detaljerp">{behandling.enkeltbehandling}</p>
+      <div class="bold">
+        <p class="detaljerp">{behandling.tid}</p>
+        <p class="detaljerp">{behandling.enkeltbehandling}</p>
+      </div>
+
       <p class="detaljerp">{behandling.flerbehandling}</p>
       <p class="detaljerp">{behandling.intro}</p>
     </div>
@@ -57,8 +61,11 @@ console.log("BEHANDLING", behandling);
     text-decoration: none;
   }
   .detaljerp {
+    margin-top: 1rem;
+  }
+  .bold {
     font-weight: bold;
-    margin-top: 1.3rem;
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 799px) /* Mobilestørrelse */ {
