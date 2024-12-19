@@ -7,7 +7,7 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
 
 <li>
   <figure>
-    <a class="grid" href=`/product/${slug}`>
+    <form class="grid" action=`/product/${slug}`>
       <div class="tekst">
         <h2>{behandling}</h2>
         <p>{beskrivelse_kort}</p>
@@ -21,7 +21,7 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
           <Button variant="primary">LÆS MERE</Button>
         </form>
       </div>
-    </a>
+    </form>
   </figure>
 </li>
 
