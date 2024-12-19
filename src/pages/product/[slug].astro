@@ -54,9 +54,6 @@ console.log("BEHANDLING", behandling);
 </MainLayout>
 
 <style>
-  .pil {
-    margin-top: 3rem;
-  }
   a {
     cursor: pointer;
     color: black;
@@ -70,20 +67,17 @@ console.log("BEHANDLING", behandling);
     margin-bottom: 2rem;
   }
 
-  @media (max-width: 799px) /* Mobilestørrelse */ {
+  @media (max-width: 899px) /* Mobilestørrelse */ {
     img {
       margin: 1.5rem 0;
     }
-    h2 {
-      margin-top: 2rem;
-    }
     .button {
-      margin-bottom: 4rem;
+      /* margin-bottom: 4rem; */
       text-align: center;
     }
   }
 
-  @media (min-width: 800px) /* computerstørrelse */ {
+  @media (min-width: 900px) /* computerstørrelse */ {
     section {
       margin: 2rem 3rem;
     }
@@ -99,22 +93,21 @@ console.log("BEHANDLING", behandling);
     p {
       margin: 0 10%;
     }
-    h2 {
-      margin-bottom: 1.5rem;
-    }
     .button {
-      display: flex;
-      align-items: flex-end; /* placerer knapperne i bunden */
       grid-column: 2;
       grid-row: 1;
-      margin-bottom: 1.5rem; /* rykker knapperne opad */
+      /* display: flex; */
       margin-left: auto;
       margin-right: auto;
-      gap: 2rem; /* afstand mellem knapperne */
+      margin-top: 48rem;
     }
     .img {
       grid-column: 1;
       grid-row: 1;
+    }
+
+    .pil {
+      margin-top: 3rem;
     }
   }
 </style>

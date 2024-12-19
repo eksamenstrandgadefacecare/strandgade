@@ -6,22 +6,22 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
 ---
 
 <li>
-  <figure>
-    <form class="grid" action=`/product/${slug}`>
-      <div class="tekst">
-        <h2>{behandling}</h2>
-        <p>{beskrivelse_kort}</p>
-      </div>
-      <img class="img" src={"/images/" + imglist} alt={imglist} />
-      <div class="button">
-        <form action="https://strandgadefacecare.onlinebooq.dk">
-          <Button variant="primary">BOOK TID</Button>
-        </form>
-        <form action=`/product/${slug}`>
-          <Button variant="primary">LÆS MERE</Button>
-        </form>
-      </div>
+  <figure class="grid">
+    <form class="tekst" action=`/product/${slug}`>
+      <h2>{behandling}</h2>
+      <p>{beskrivelse_kort}</p>
     </form>
+    <form action=`/product/${slug}`>
+      <img class="img" src={"/images/" + imglist} alt={imglist} />
+    </form>
+    <div class="button">
+      <form action="https://strandgadefacecare.onlinebooq.dk" target="_blank">
+        <Button variant="primary">BOOK TID</Button>
+      </form>
+      <form action=`/product/${slug}`>
+        <Button variant="primary">LÆS MERE</Button>
+      </form>
+    </div>
   </figure>
 </li>
 
@@ -32,16 +32,24 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
     text-decoration: none;
   }
 
+  h2 {
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .button {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem; /* afstand mellem knapperne */
+  }
+
   @media (max-width: 799px) /* Mobilestørrelse */ {
     img {
       margin: 1.5rem 0;
     }
     h2 {
-      margin-top: 2rem;
-    }
-    .button {
-      margin-bottom: 4rem;
-      text-align: center;
+      margin-top: 4rem;
     }
   }
 
@@ -59,20 +67,12 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
       grid-row: 1;
     }
     p {
-      margin: 0 10%;
-    }
-    h2 {
-      margin-bottom: 1.5rem;
+      margin: 0 5%;
     }
     .button {
-      display: flex;
-      align-items: flex-end; /* placerer knapperne i bunden */
       grid-column: 2;
       grid-row: 1;
-      margin-bottom: 1.5rem; /* rykker knapperne opad */
-      margin-left: auto;
-      margin-right: auto;
-      gap: 2rem; /* afstand mellem knapperne */
+      margin-top: 20rem;
     }
     .img {
       grid-column: 1;
@@ -80,12 +80,3 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
     }
   }
 </style>
-
-<!-- <script>
-  import { animate, scroll, inView } from "motion";
-
-  scroll(animate(".grid", { opacity: [0.5, 1] }), {
-    target: document.querySelector(".grid"),
-    offset: ["start center", "end center"],
-  });
-</script> -->
