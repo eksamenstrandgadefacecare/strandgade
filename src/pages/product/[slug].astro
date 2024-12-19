@@ -45,7 +45,9 @@ console.log("BEHANDLING", behandling);
     </div>
     <img src={`/images/${behandling.imgsingle}`} alt={behandling.behandling} />
     <div class="button">
-      <Button variant="primary">BOOK TID</Button>
+      <form action="https://strandgadefacecare.onlinebooq.dk">
+        <Button variant="primary">BOOK TID</Button>
+      </form>
     </div>
   </section>
   <Slideshow />

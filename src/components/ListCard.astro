@@ -14,8 +14,12 @@ const { behandling, beskrivelse_kort, pris, imgsingle, imglist, slug } =
       </div>
       <img class="img" src={"/images/" + imglist} alt={imglist} />
       <div class="button">
-        <Button variant="primary">BOOK TID</Button>
-        <Button variant="primary">LÆS MERE</Button>
+        <form action="https://strandgadefacecare.onlinebooq.dk">
+          <Button variant="primary">BOOK TID</Button>
+        </form>
+        <form action=`/product/${slug}`>
+          <Button variant="primary">LÆS MERE</Button>
+        </form>
       </div>
     </a>
   </figure>
